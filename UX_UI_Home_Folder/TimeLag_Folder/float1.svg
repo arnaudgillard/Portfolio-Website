@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="51px" height="86px" viewBox="0 0 51 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FF61AD" offset="0%"></stop>
+            <stop stop-color="#FF2719" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="31" transform="translate(-797.000000, -73.000000)">
+            <g id="Group" transform="translate(775.000000, 61.000000)">
+                <g id="Group-2" transform="translate(6.000000, 12.000000)">
+                    <g id="Health-Icon" transform="translate(17.000000, 0.000000)">
+                        <path d="M31.2652,0 C36.084,0 38.4928,0 41.0868,0.82 C43.9188,1.8508 46.1492,4.0812 47.18,6.9132 C48,9.5068 48,11.9164 48,16.7348 L48,31.2652 C48,36.084 48,38.4928 47.18,41.0868 C46.1492,43.9188 43.9188,46.1492 41.0868,47.1796 C38.4928,48 36.084,48 31.2652,48 L16.7348,48 C11.916,48 9.5068,48 6.9132,47.1796 C4.0812,46.1492 1.8508,43.9188 0.82,41.0868 C0,38.4928 0,36.084 0,31.2652 L0,16.7348 C0,11.9164 0,9.5068 0.82,6.9132 C1.8508,4.0812 4.0812,1.8508 6.9132,0.82 C9.5068,0 11.916,0 16.7348,0 L31.2652,0 Z" id="Background" fill="#FFFFFF"></path>
+                        <path d="M40.4,14.4 C40.4,10.7819195 37.6241654,8 34.4,8 C32.1477814,8 30.3284441,8.76630343 29.2,10.4 C28.0715559,8.76630343 26.2522186,8 24.4,8 C20.7758346,8 18,10.7819195 18,14.4 C18,14.2464917 18.0002551,14.2793324 18,14.4 C18.0002552,14.3457624 18,14.3797342 18,14.4 C18,19.781306 23.1771484,25.2541464 29.2,27.6 C33.9496488,25.9964926 40.4,19.781306 40.4,14.4 C40.4,14.3802589 40.3997367,14.3468021 40.4,14.4 C40.3997368,14.2803643 40.4,14.2470086 40.4,14.4 Z" fill="url(#linearGradient-1)"></path>
+                    </g>
+                    <text id="Sleep-Routine" font-family="SFProText-Medium, SF Pro Text" font-size="15" font-weight="400" letter-spacing="-0.4823529" fill="#FFFFFF">
+                        <tspan x="22.4214584" y="67">Sleep </tspan>
+                        <tspan x="15.6125516" y="85">Routine</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="778px" height="693px" viewBox="0 0 778 693" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>Group 27</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="58.5184939%" y1="22.7272019%" x2="39.1195162%" y2="60.4989367%" id="linearGradient-1">
+            <stop stop-color="#EEEEEE" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="72.5416284%" y1="17.1054734%" x2="16.2451818%" y2="34.53076%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#D8D8D8" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="17.4626026%" y1="19.2722879%" x2="63.4035513%" y2="65.9772159%" id="linearGradient-3">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-27">
+            <rect id="Rectangle" fill="#FFFFFF" transform="translate(69.500000, 242.000000) rotate(30.000000) translate(-69.500000, -242.000000) " x="13" y="227" width="113" height="30" rx="15"></rect>
+            <rect id="Rectangle" fill="#FFFFFF" transform="translate(709.500000, 242.000000) scale(-1, 1) rotate(30.000000) translate(-709.500000, -242.000000) " x="653" y="227" width="113" height="30" rx="15"></rect>
+            <rect id="Rectangle" fill="#FFFFFF" transform="translate(204.500000, 106.000000) rotate(60.000000) translate(-204.500000, -106.000000) " x="148" y="91" width="113" height="30" rx="15"></rect>
+            <rect id="Rectangle" fill="#FFFFFF" transform="translate(574.500000, 106.000000) scale(-1, 1) rotate(60.000000) translate(-574.500000, -106.000000) " x="518" y="91" width="113" height="30" rx="15"></rect>
+            <rect id="Rectangle" fill="#FFFFFF" transform="translate(389.500000, 57.000000) rotate(90.000000) translate(-389.500000, -57.000000) " x="333" y="42" width="113" height="30" rx="15"></rect>
+            <rect id="Rectangle" fill="#FFFFFF" x="169" y="664" width="407" height="29"></rect>
+            <path d="M107.82138,365.571488 L114.431358,394.202448 C64.2059692,415.621138 29,465.449172 29,523.5 C29,601.096007 91.9039927,664 169.5,664 C171.907097,664 174.300056,663.939468 176.677438,663.819842 L181.630333,685.273185 C182.201427,687.746864 182.96632,690.125407 183.905273,692.396478 C179.156532,692.796126 174.352074,693 169.5,693 C75.8877349,693 0,617.112265 0,523.5 C0,451.648575 44.7071362,390.239062 107.82138,365.571488 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+            <path d="M36.5310318,569.000001 C55.4372035,624.265204 107.828322,664 169.5,664 C171.907097,664 174.300056,663.939468 176.677438,663.819842 L181.630333,685.273185 C182.201427,687.746864 182.96632,690.125407 183.905273,692.396478 C179.156532,692.796126 174.352074,693 169.5,693 C91.649418,693 26.0572124,640.515652 6.17642838,569 L36.531027,569 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+            <path d="M541.269918,689.930659 L556.021122,675.179455 C559.503797,671.69678 562.296287,667.78528 564.398592,663.61492 C568.232712,663.87028 572.101207,664 576,664 C670.992977,664 748,586.992977 748,492 C748,397.007023 670.992977,320 576,320 C491.202833,320 420.737876,381.363487 406.588433,462.107156 L382.244612,437.763336 C405.760647,352.565812 483.823809,290 576.5,290 C687.785377,290 778,380.214623 778,491.5 C778,602.785377 687.785377,693 576.5,693 C564.48187,693 552.70948,691.947857 541.269918,689.930659 Z" id="Combined-Shape" fill="url(#linearGradient-2)"></path>
+            <path d="M747.170486,509 L777.250616,509 C768.381708,612.091304 681.889473,693 576.5,693 C566.290088,693 556.257532,692.240645 546.455729,690.775331 L573.252559,663.978501 C574.166667,663.992816 575.082494,664 576,664 C665.256384,664 738.633552,596.012994 747.170486,509 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+            <path d="M175.282013,585.384988 C143.047485,541.612398 124,487.530588 124,429 C124,283.196826 242.196826,165 388,165 C459.391693,165 524.164722,193.337871 571.6844,239.378928 L557.851042,266.893237 C514.967351,221.98018 454.501236,194 387.5,194 C257.436941,194 152,299.436941 152,429.5 C152,486.653426 172.359608,539.051611 206.221819,579.83755 L175.282005,585.384977 Z" id="Combined-Shape" fill="url(#linearGradient-3)"></path>
+        </g>
+    </g>
+</svg>

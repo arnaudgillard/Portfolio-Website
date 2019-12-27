@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AGP</title>
+
+<style>
+    
+    *, *:before, *:after {
+                        box-sizing: border-box;
+                    }
+    
+    .box88 {
+                position: sticky;
+                top: calc(100vh*0.05);
+                left:100vw;
+         justify-self: flex-end;
+        z-index: 999;
+	       } 
+    
+    .openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: darkgrey;
+  padding: 10px 10px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:white;
+}
+    
+body  {
+  background-image: url("/UX_UI_Home_Folder/IBM/background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+object-fit: cover;
+}
+    
+    
+    
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,600');
+            h1 {font-family: 'IBM Plex Sans', sans-serif; color: white; font-size: 2.5em; font-weight: 300;}
+            h2 {font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 1em; color: white;}
+            h3 {font-family: 'IBM Plex Sans', sans-serif; color: white; margin: 0;}
+            h4 {font-family: 'IBM Plex Sans', sans-serif; font-size: 1em; color: black;}
+            h5 {font-family: 'IBM Plex Sans', sans-serif; color: white;font-size: 2.5em; font-weight: 600;margin: 0;}
+            p  {font-family: 'IBM Plex Sans', sans-serif; color: grey; }
+    pwhite {font-family: 'IBM Plex Sans', sans-serif; color: white; margin: 0;}
+    psm {font-family: 'IBM Plex Sans', sans-serif; color: white; font-size: 0.75em;}
+            figcaption {font-family: 'IBM Plex Sans', sans-serif; font-size: 1em; color: black; font-weight: 300;}
+    
+            figcaption {
+                        margin-top: 1em;
+                        }
+    
+            .nested  {
+                        display:grid;
+                        grid-template-columns: repeat(5,1fr);
+                        /*grid-auto-rows: calc (100%/3);*/
+                        grid-gap:1em;  
+                        }
+    
+            .nested > div {
+                            border: #333 1px solid;
+                            padding: 1em;
+                            }
+    
+    .nestedideation  {
+                        display:grid;
+                        grid-template-columns: repeat(2,1fr);
+                        grid-template-rows:repeat(2,1fr) ;*/
+                        grid-gap:1em;  
+                        }
+    
+            .nestedideation > div {
+                            border: #333 1px solid;
+                            padding: 1em;
+                            }
+    
+ 
+
+
+@media all and (min-aspect-ratio: 4/3) {
+    .wrapper {
+                  justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-row-gap:0%;
+                margin: 0 auto;
+                grid-template-columns: repeat(5,calc((100vh/3)*0.74916)); /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/30) ;
+                margin-right:calc(100vw/30);
+    }
+    
+    
+    .cover_image{      grid-column:3 / 5;
+		              grid-row: 9 /17;
+                            /* justify-self:end; */
+                    }
+    
+     .image1{      grid-column:2 / 3;
+		              grid-row: 9 /17;
+                            /* justify-self:end; */
+                    }
+    
+       .titletext{      grid-column:1 / 2;
+		              grid-row: 9 /17;
+           margin-left: 5%;
+           text-align: left;
+           margin-top: 50px;
+           
+                            /* justify-self:end; */
+                    }
+  
+    
+     .icon1{      grid-column:1 / 2;
+		          grid-row: 19 /21;
+         height: 50px;
+               
+                /* justify-self:end; */
+                    }
+   
+    .icon2{      grid-column:2 / 3;
+		          grid-row: 19 /21;
+                float: left;
+        height: 50px;
+                /* justify-self:end; */
+                    }
+     .icon3{      grid-column:3 / 4;
+		          grid-row: 19 /21;
+                float: left;
+         height: 50px;
+                /* justify-self:end; */
+                    }
+     .icon4{      grid-column:4 / 5;
+		          grid-row: 19 /21;
+                float: left;
+         height: 50px;
+                /* justify-self:end; */
+                    }
+    
+     .icon5{      grid-column:5 / 6;
+		          grid-row: 19 /21;
+                float: left;
+         height: 50px;
+                /* justify-self:end; */
+                    }
+
+  
+  
+    
+    
+    
+    .box16{
+                    grid-column: 1 / -1;
+		          grid-row: 1;
+		          display: grid;
+                    grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		          grid-column: 1 / 2;
+		          grid-row: 1;
+                }
+
+
+    
+        .box1{
+                    /*align-self:start;  */
+                    display: none;
+                    }
+    
+        .box2 {
+                    /* align-self:end; */
+                    /*grid-column: 3;*/
+                    /*grid-row: 1/3;*/
+                     display: none;
+                    }
+    
+        .box3{
+                    /* justify-self:end; */
+                   display: none;
+                    }
+    
+        .box4{
+                    /* justify-self:end; */
+                    display: none;
+                    }
+    
+    
+         .dthinkingimage1{      grid-column:1 / 3;
+		              grid-row: 28 /38;
+                            /* justify-self:end; */
+                    }
+    .dthinkingtext1{
+                        grid-column:3 / 6;
+		              grid-row: 28 /32;
+        margin-top:0;
+        justify-self: flex-start;
+        
+    }
+    
+    .dthinkingpanoramic {
+        grid-column:3 / 6;
+		              grid-row: 34 /38;
+        
+    }
+    
+
+    
+    
+    .threegroups {
+                        grid-column:1/6;
+		                  grid-row: 40/50;
+                        display: grid;
+                        grid-column-gap: 5%px;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-column-gap: 1.5%;
+                        grid-template-rows: 1fr;
+
+    
+                        
+                    }
+   
+    
+    .threegroups1 {
+                        height: 150px;
+                        align-self: center;
+
+                        grid-column:1/2;
+                        background-color: white;
+                        padding: 5%;
+                        background: #282828;
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        grid-auto-rows: 50px 20px 1fr;
+                        opacity: 0.99;
+                        transition: 0.3s;
+        
+                    }
+    
+    .threegroups1:hover {height: 90%;}
+     .threegroups2:hover {height: 90%;}
+     .threegroups3:hover {height: 90%;}
+    
+    .threegroups2 {
+                       height: 150px;
+                        align-self: center;
+                        margin-left: 5%;
+                        grid-column:2/3;
+                        background-color: white;
+                        padding: 5%;
+                        background: #282828;
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        grid-auto-rows: 50px 20px 1fr;
+                        opacity: 0.99;
+                        transition: 0.3s;
+                    }
+    
+     .threegroups3 {
+                        height: 150px;
+                        align-self: center;
+                        margin-left: 5%;
+                        grid-column:3/4;
+                        background-color: white;
+                        padding: 5%;
+                        background: #282828;
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        grid-auto-rows: 50px 20px 1fr;
+                        opacity: 0.99;
+                        transition: 0.3s;
+                    }
+    
+    
+    .internalgrid1icon{
+                        text-align: left;
+                        grid-column: 1/2;
+                        grid-auto-rows: 1/2;
+                        height: 50px;
+                        align-self:flex-start;
+                        }
+    
+    .internalgrid1text{
+                        grid-column: 1/2;
+                        grid-row: 2/3; 
+                        align-self: flex-start;
+        margin-top: 5%;
+                        } 
+    
+    .internalgrid2text{
+                        grid-column: 1/2;
+                        grid-row: 3/4; 
+                        align-self: flex-end;
+                        opacity: 0;
+                        } 
+    
+     .threegroups1:hover {height: 90%;}
+    
+    .grouptext1{
+                        grid-column: 3/6;
+                        grid-row: 55/68; 
+        /*align-self: flex-end;*/
+                        } 
+    
+    .grouptext2{
+                        grid-column: 1/4;
+                        grid-row: 92/100; 
+        /*align-self: flex-end;*/
+                        } 
+    .grouptext3{
+                        grid-column: 4/6;
+                        grid-row: 105/115; 
+        /*align-self: flex-end;*/
+                        } 
+    
+    
+    .scrollingimage1{
+                        grid-column: 1/3;
+                        grid-row: 55/75; 
+                        } 
+     .scrollingimage3{
+                        grid-column: 3/6;
+                        grid-row: 68/75;
+         background: white;
+                        } 
+    .scrollingimage4{
+                        grid-column: 1/6;
+                        grid-row: 80/90; 
+                        } 
+    .scrollingimage5{
+                        grid-column: 4/6;
+                        grid-row: 92/100; 
+                        }
+    
+    .scrollingimage6{
+                        grid-column: 1/3;
+                        grid-row: 105/112; 
+                        } 
+    
+     .scrollingimage7{
+                        grid-column: 3/4;
+                        grid-row: 105/112; 
+                        } 
+ 
+
+        .scrollingimage11{
+                        grid-column: 2/4;
+                        grid-row: 114/120; 
+                        } 
+    
+  
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+@media all and (max-aspect-ratio: 4/3) {
+         
+    .wrapper {
+                justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-row-gap:0;
+                margin: 0 auto;
+                grid-template-columns: repeat(4,calc((100vh/3)*0.74916)); /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/30) ;
+                margin-right:calc(100vw/30);
+                }
+         
+    .box16{
+                grid-column: 1 / -1;
+		          grid-row: 1;
+		          display: grid;
+                grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		      grid-column: 1 / 2;
+		      grid-row: 1;
+                }
+
+            
+    .box1 {
+                display: none;
+                }
+
+    .box2 {
+                display: none;
+                }
+    
+    .box3 {
+                display: none;
+                }
+    .box4 {
+                display: none;
+                }
+    .box5 {
+                display: none;
+                }
+    .box6 {      grid-column: 1 / 2;
+		      grid-row: 8 /16;
+       
+
+                }
+   
+    .box8 {     grid-column: 3 / 4;
+		          grid-row: 8 /16;
+
+                }
+    .box9 {       grid-column: 4 / 5;
+		          grid-row: 8 / 11;
+                object-fit: fill;
+        /*height: 0%;*/
+
+                }
+        
+    
+    
+    .box10 {
+                 grid-column: 4 / 5;
+		          grid-row: 13 /16;
+      
+                }
+    .box11{
+
+                }
+    .box12{
+
+                }
+    
+    .box13{
+
+                }
+    .box14{
+                display: none;
+                }
+    .box15{
+                display: none;
+                }   
+    .box16{
+                } 
+    
+ 
+    }
+    
+    
+    
+    @media all and (max-aspect-ratio: 8/7) {
+         
+    .wrapper {
+                justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-row-gap:0;
+                margin: 0 auto;
+                grid-template-columns: repeat(3,calc((100vh/3)*0.74916)); /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/30) ;
+                margin-right:calc(100vw/30);
+                }
+         
+    .box16{
+                grid-column: 1 / -1;
+		          grid-row: 1;
+		          display: grid;
+                grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		          grid-column: 1 / 2;
+		          grid-row: 1;
+                }
+
+            
+    .box1 {
+                display: none;
+                }
+
+    .box2 {
+                display: none;
+                }
+    
+    .box3 {
+                display: none;
+                }
+    .box4 {
+                display: none;
+                }
+    .box5 {
+                display: none;
+                }
+    .box6 {        grid-column: 1 / 2;
+		          grid-row: 8 /16;
+
+                }
+    .box7 {
+                grid-column: 2 / 3;
+		          grid-row: 8 /16;
+                }
+    .box8 {      grid-column: 3 / 4;
+		          grid-row: 8 /11;
+
+                }
+    .box9 {       grid-column: 3 / 4;
+		          grid-row: 13 / 16;
+       
+
+                }
+    .box10 {
+                grid-column: 3 / 4;
+		      grid-row: 18 /21;
+                      
+
+                }
+    .box11{
+
+                }
+    .box12{
+
+                }
+    
+    .box13{
+
+                }
+    .box14{
+                display: none;
+                }
+    .box15{
+                display: none;
+                }   
+    .box16{
+                } 
+    
+ 
+    }
+    
+    @media all and (max-aspect-ratio: 4/5) {
+         
+    .wrapper {
+                justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-gap:15px;
+                margin: 0 auto;
+                grid-template-columns: repeat(2,calc((100vh/3)*0.74916)); /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/15) ;
+                margin-right:calc(100vw/15);
+                }
+         
+    .box16{
+                grid-column: 1 / -1;
+		          grid-row: 1;
+		          display: grid;
+                grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		      grid-column: 1 / 2;
+		      grid-row: 1;
+                }
+
+
+    .box1 {
+                display: none;
+                }
+
+    .box2 {
+                display: none;
+                }
+    
+    .box3 {
+                display: none;
+                }
+    .box4 {
+                display: none;
+                }
+    .box5 {
+                display: none;
+                }
+    .box6 {         grid-column: 1 / 2;
+		          grid-row: 3 /7;
+
+                }
+    .box7 {
+                    grid-column: 2 / 3;
+		              grid-row: 3 /7;
+                }
+    .box8   {       grid-column: 1 / 2;
+		              grid-row: 8 /12;
+
+                }
+    .box9 {         grid-column: 2 / 3;
+		              grid-row: 8 / 15;
+       
+
+                }
+    .box10 {
+                       grid-column: 1 / 2;
+		              grid-row: 15 /24;
+                      
+
+                }
+    .box11{
+
+                }
+    .box12{
+
+                }
+    
+    .box13{
+
+                }
+    .box14{
+                display: none;
+                }
+    .box15{
+                display: none;
+                }   
+    .box16{
+                } 
+    
+ 
+    }
+    
+    @media all and (max-width:415px) {
+         
+    .wrapper {
+                justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-gap:15px;
+                margin: 0 auto;
+                grid-template-columns: 100%; /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/6) calc(100vh/6) calc(100vh/6) calc(100vh/6) calc(100vh/6) calc(100vh/6);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/15) ;
+                margin-right:calc(100vw/15);
+                }
+         
+    .box16{
+                grid-column: 1;
+		          grid-row: 1;
+		          display: grid;
+                grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		      grid-column: 1 / 2;
+		      grid-row: 1;
+                }
+
+
+            
+    .box1 {
+                display: none;
+                }
+
+    .box2 {
+                display: none;
+                }
+    
+    .box3 {
+                display: none;
+                }
+    .box4 {
+                display: none;
+                }
+    .box5 {
+                display: none;
+                }
+    .box6 {         /*grid-column: 1 / 2;
+		          grid-row: 3 /5;*/
+display: none;
+                }
+    .box7 {
+                    /*grid-column: 1 / 2;
+		              grid-row: 6 /8;*/
+        display: none;
+                }
+    .box8   {       /*grid-column: 1 / 2;
+		              grid-row: 9 /11;*/
+        display: none;
+                }
+    .box9 {        /* grid-column: 1 / 2;
+		              grid-row: 12 / 15;*/
+        display: none;
+       
+
+                }
+    .box10 {
+                       grid-column: 1 / 2;
+		              grid-row: 2 /5;
+                      
+
+                }
+    .box11{
+
+                }
+    .box12{
+
+                }
+    
+    .box13{
+
+                }
+    .box14{
+                display: none;
+                }
+    .box15{
+                display: none;
+                }   
+    .box16{
+                } 
+    
+ 
+    }
+    
+    
+    
+    
+    
+    }
+    
+ 
+     
+
+    @supports (display: grid) {
+        .wrapper > * {
+                        width: auto;
+                        margin: 0;
+                        }
+    } 
+    
+    
+        .wrapper > div img {
+                                max-width: 120%;
+                                max-height: 120%;
+                            }*/
+    
+        /*.wrapper > div {
+                            background-color: lightgrey;
+                            padding: 1em;*/
+                        }
+    
+        /*.wrapper > div:nth-child(even){
+                            background: grey;
+                        }*/
+    
+
+
+        .object-fit_fill { object-fit: fill }
+        .object-fit_contain { object-fit: contain }
+        .object-fit_cover { object-fit: cover }
+        .object-fit_none { object-fit: none }
+        .object-fit_scale-down { object-fit: scale-down }
+
+    
+        img { height: 100%;}
+
+        img[class] {width: 100%;}
+
+        .image {
+                    float: left;
+                    width: 40%;
+            margin: 0 30px 20px 0;}
+            
+.fade-in1st {
+  animation: fadeIn ease-in 1500ms;
+  -webkit-animation: fadeIn ease-in 1500ms;
+       -webkit-animation-delay: 1s;
+  -moz-animation: fadeIn ease-in 1500ms;
+  -o-animation: fadeIn ease-in 1500ms;
+  -ms-animation: fadeIn ease-in 1500ms;
+        animation-delay: 1s;
+}
+
+.fade-in2nd {
+    
+  animation: fadeIn ease-in 2000ms;
+  -webkit-animation: fadeIn ease-in 2000ms;
+    -webkit-animation-delay: 1200ms;
+  -moz-animation: fadeIn ease-in 2000ms;
+  -o-animation: fadeIn ease-in 2000ms;
+  -ms-animation: fadeIn ease-in 2000ms;
+    animation-delay: 1200ms;
+}
+
+.fade-in3rd {
+    
+  animation: fadeIn ease-in 2000ms;
+  -webkit-animation: fadeIn ease-in 2000ms;
+    -webkit-animation-delay: 1400ms;
+  -moz-animation: fadeIn ease-in 2000ms;
+  -o-animation: fadeIn ease-in 2000ms;
+  -ms-animation: fadeIn ease-in 2000ms;
+    animation-delay: 1400ms;
+}
+
+.fade-in4th {
+    
+  animation: fadeIn ease-in 2000ms;
+  -webkit-animation: fadeIn ease-in 2000ms;
+    -webkit-animation-delay: 1600ms;
+  -moz-animation: fadeIn ease-in 2000ms;
+  -o-animation: fadeIn ease-in 2000ms;
+  -ms-animation: fadeIn ease-in 2000ms;
+    animation-delay: 1600ms;
+}
+
+.fade-in5th {
+    
+  animation: fadeIn ease-in 2000ms;
+  -webkit-animation: fadeIn ease-in 2000ms;
+    -webkit-animation-delay: 1800ms;
+  -moz-animation: fadeIn ease-in 2000ms;
+  -o-animation: fadeIn ease-in 2000ms;
+  -ms-animation: fadeIn ease-in 2000ms;
+    animation-delay: 1800ms;
+}
+
+
+@keyframes fadeIn{
+                    0% {
+                        opacity:0;
+                                    }
+                    100% {
+                        opacity:1;
+                                    }
+                }
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+
+
+
+
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    </style>
+    
+</head>
+    
+    
+<body bgcolor="F3F3F3">
+    
+    <div class="wrapper">
+        
+         <div class="box box88">
+                    <button class="openbtn" onclick="openNav()">
+                    <img src="navigation_button.svg" cstyle="width:16px">
+                    </button>  
+                </div>
+        
+        <div class="box box1">
+        </div>
+        
+        <div class="box box2">
+        </div>
+         
+        <div class="box box3">
+        </div>
+        
+        <div class="box box4">
+        </div>
+        
+        <div class="box cover_image">
+            <a style="text-decoration:none" href="Industrial_Design_&_Technology.html"> 
+                <img src="/UX_UI_Home_Folder/IBM/teamjump.png" class="object-fit_cover"/>
+            </a>
+        </div>
+        
+         <div class="box image1">
+            <a style="text-decoration:none" href="Industrial_Design_&_Technology.html"> 
+                <img src="/UX_UI_Home_Folder/IBM/corner.png" class="object-fit_cover"/>
+            </a>
+        </div>
+        
+        <div class="box titletext">
+            <p>12 Months in</p>
+             <h5>Cloud, Data and AI</h5>
+             </div>
+        
+        
+         <div class="box icon1">
+                <img src="/UX_UI_Home_Folder/IBM/first%20icon.svg"/>
+                <p>Take every opportunity</p>
+        </div>
+        
+        
+        <div class="box icon2">
+                <img src="/UX_UI_Home_Folder/IBM/second%20icon.svg"/>
+                <p>Experience design at an enterprise level</p>
+        </div>
+        
+          <div class="box icon3">
+                <img src="/UX_UI_Home_Folder/IBM/third%20icon.svg"/>
+                <p>Gain a deeper understanding of UX design</p>
+        </div>
+        
+        <div class="box icon4">
+                <img src="/UX_UI_Home_Folder/IBM/fourth%20icon.svg"/>
+                <p>Expand my knowledge in software and tech</p>
+        </div>
+        
+           <div class="box icon5">
+                <img src="/UX_UI_Home_Folder/IBM/fifth%20icon.svg"/>
+                <p>Challenge myself</p>
+        </div>
+    
+        <div class="box box16">
+                 
+                 <div class=" box box17">
+                     <a style="text-decoration:none" href="UI_UX.html"> 
+                         <h1>IBM</h1> 
+                     </a>
+                 </div>
+                 
+
+        </div>
+
+        <div class="box dthinkingimage1">
+            <a style="text-decoration:none" href="Industrial_Design_&_Technology.html"> 
+                <img src="/UX_UI_Home_Folder/IBM/dtworkshopgroup.jpg" class="object-fit_cover"/>
+            </a>
+        </div>
+        
+        <div class="box dthinkingtext1">
+            <h3>IBM Enterprise Design Thinking</h3>
+            <p>Throughout my time at IBM I have gained experience and confidence in practicing Enterprise Design Thinking. I participated, facilitated and led full worshops within the Studio and external events with IBM clicents. To conclude my placement, I was tasked with running a full two-day workshop at the Northumbria Waters Conference.</p>
+        </div>
+        
+        <div class="box dthinkingpanoramic">
+                <img src="/UX_UI_Home_Folder/IBM/panoramic.png" class="object-fit_cover"/>
+        </div>
+        
+    
+          <div class="threegroups">
+                <div class="threegroups1">
+                        <div class="internalgrid1icon">
+                            <img src="/UX_UI_Home_Folder/IBM/appconnecticon.svg"/>
+                              <div class="internalgrid1text">
+                            <pwhite>App Connect</pwhite>
+                        </div>
+                            <div class="internalgrid2text">
+                            <pwhite>This is a longer sentence that should really appear only when the box is expanded to its full state.</pwhite>
+                        </div>
+                           
+                        </div>
+                </div>
+            <div class="threegroups2">
+              <div class="internalgrid1icon">
+                            <img src="/UX_UI_Home_Folder/IBM/cloudicon.svg"/>
+                        </div>
+                        <div class="internalgrid1text">
+                            <pwhite>Cloud, Data and AI</pwhite>
+                        </div>
+            </div>
+            <div class="threegroups3">
+               <div class="internalgrid1icon">
+                            <img src="/UX_UI_Home_Folder/IBM/givebackicon.svg"/>
+                        </div>
+                        <div class="internalgrid1text">
+                            <pwhite>Giveback</pwhite>
+                        </div>
+            </div>
+        </div>       
+        
+        <div class="box scrollingimage1">
+                    <img src="UX_UI_Home_Folder/IBM/collage27.png" class="object-fit_cover"/>
+        </div>
+         <div class="box scrollingimage3">
+                    <img src="UX_UI_Home_Folder/IBM/collage16.png" class="object-fit_cover"/>
+        </div>
+        <div class="grouptext1">
+              <div class="internalgrid1icon">
+                            <img src="/UX_UI_Home_Folder/IBM/appconnecticon.svg"/>
+                        </div>
+                        <div class="internalgrid1text">
+                            <h1>IBM App Connect</h1>
+                            <p>This is some body text which describes what I have done for App Connect and the sort of work I was exposed to.</p>
+                        </div>
+            </div>
+        <div class="grouptext2">
+              <div class="internalgrid1icon">
+                            <img src="/UX_UI_Home_Folder/IBM/cloudicon.svg"/>
+                        </div>
+                        <div class="internalgrid1text">
+                            <h1>Cloud, Data and AI</h1>
+                            <p>This is some body text which describes what I have done for App Connect and the sort of work I was exposed to.</p>
+                        </div>
+            </div>
+        
+         <div class="grouptext3">
+              <div class="internalgrid1icon">
+                            <img src="/UX_UI_Home_Folder/IBM/givebackicon.svg"/>
+                        </div>
+                        <div class="internalgrid1text">
+                            <h1>Giveback</h1>
+                            <p>This is some body text which describes what I have done for App Connect and the sort of work I was exposed to.</p>
+                        </div>
+            </div>
+        
+        
+      
+        
+         <div class="box scrollingimage4">
+                    <img src="UX_UI_Home_Folder/IBM/threeproducts.png" class="object-fit_cover"/>
+        </div>
+        <div class="box scrollingimage5">
+                    <img src="UX_UI_Home_Folder/IBM/quotes.png" class="object-fit_cover"/>
+        </div>
+         <div class="box scrollingimage6">
+                    <img src="UX_UI_Home_Folder/IBM/plantbuddy.png" class="object-fit_cover"/>
+        </div>
+        <div class="box scrollingimage7">
+                    <img src="UX_UI_Home_Folder/IBM/plantbuddypresenting.png" class="object-fit_cover"/>
+        </div>
+  
+        <div class="box scrollingimage11">
+                    <img src="UX_UI_Home_Folder/IBM/social3.png" class="object-fit_cover"/>
+        </div>
+ 
+    
+        
+        
+        
+    </div>
+</body>

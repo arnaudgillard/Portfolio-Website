@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AGP</title>
+
+<style>
+    
+    *, *:before, *:after {
+                        box-sizing: border-box;
+                    }
+    
+.video-container {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+    
+    
+    
+    
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,600');
+            h1 {font-family: 'IBM Plex Sans', sans-serif; color: black; font-size: 2.5em; font-weight: 300;}
+            h2 {font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 1em; color: black;}
+            h3 {font-family: 'IBM Plex Sans', sans-serif; color: black;}
+            h4 {font-family: 'IBM Plex Sans', sans-serif; font-size: 1em; color: black;}
+            h5 {font-family: 'IBM Plex Sans', sans-serif; color: black;}
+            p  {font-family: 'IBM Plex Sans', sans-serif; color: black;}
+            figcaption {font-family: 'IBM Plex Sans', sans-serif; font-size: 1em; color: black; font-weight: 300;}
+    
+            figcaption {
+                        margin-top: 1em;
+                        }
+    
+            .nested  {
+                        display:grid;
+                        grid-template-columns: repeat(5,1fr);
+                        /*grid-auto-rows: calc (100%/3);*/
+                        grid-gap:1em;  
+                        }
+    
+            .nested > div {
+                            border: #333 1px solid;
+                            padding: 1em;
+                            }
+    
+    .nestedideation  {
+                        display:grid;
+                        grid-template-columns: repeat(2,1fr);
+                        grid-template-rows:repeat(2,1fr) ;*/
+                        grid-gap:1em;  
+                        }
+    
+            .nestedideation > div {
+                            border: #333 1px solid;
+                            padding: 1em;
+                            }
+    
+ 
+
+
+@media all and (min-aspect-ratio: 4/3) {
+    .wrapper {
+                  justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-row-gap:0%;
+                margin: 0 auto;
+                grid-template-columns: repeat(5,calc((100vh/3)*0.74916)); /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/30) ;
+                margin-right:calc(100vw/30);
+    }
+    
+    .box16{
+                    grid-column: 1 / -1;
+		          grid-row: 1;
+		          display: grid;
+                    grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		          grid-column: 1 / 2;
+		          grid-row: 1;
+                }
+
+	.box18 {
+	               grid-column: 3 / 4;
+		          grid-row: 1;
+                    justify-self: end;
+                    margin-top: 5px;
+	           } 
+    
+    
+        .box1{
+                    /*align-self:start;  */
+                    display: none;
+                    }
+    
+        .box2 {
+                    /* align-self:end; */
+                    /*grid-column: 3;*/
+                    /*grid-row: 1/3;*/
+                     display: none;
+                    }
+    
+        .box3{
+                    /* justify-self:end; */
+                   display: none;
+                    }
+    
+        .box4{
+                    /* justify-self:end; */
+                    display: none;
+                    }
+    
+        .box5{
+                    /* justify-self:end; */
+                     display: none;
+                    }
+        .box6{      grid-column: 1 / 6;
+		              grid-row: 8 /16;
+                            /* justify-self:end; */
+                    }
+    
+    .covertextbox{      grid-column: 3 / 6;
+		              grid-row: 16 /22;
+        text-align: right;
+                            /* justify-self:end; */
+                    }
+    
+        .box7{      grid-column: 1 / 6;
+		              grid-row: 35 /46;
+            background: white;
+                    /* justify-self:end; */
+                    }
+        .box8{      grid-column: 3 / 6;
+		              grid-row: 26 /30;
+            text-align: right;
+                    /* justify-self:end; */
+                    }
+    
+        .box9{      grid-column: 1 / 3;
+		              grid-row: 47 /58;
+            text-align: right;
+            background: none;
+                    /* justify-self:end; */
+                    }
+    
+               
+    
+        .box12{grid-column: 3 / 6;
+		              grid-row: 58 /72;
+            background: #FF8B00;
+                    /* justify-self:end; */
+                    }
+    
+        .box13 {grid-column: 1 / 3;
+		              grid-row: 58 /65;
+            
+                    /* justify-self:end; */
+                    }
+    
+        .box14{grid-column: 3 / 6;
+		              grid-row: 47 /58;
+            text-align: left;
+        
+                    /* justify-self:end; */
+                    }
+    
+        
+    
+    .surfacemodelling1{ grid-column: 3 / 6;
+		  grid-row: 78 /95;
+
+        
+    }
+    
+    .surfacemodelling2{grid-column: 1 / 3;
+		  grid-row: 77 /95;
+  
+        
+    }
+    
+    .hero1{grid-column: 1 / 3;
+		  grid-row: 102 /115;
+
+        
+    }
+    
+    .hero2{grid-column: 3 / 6;
+		  grid-row: 102 /115;
+    }
+    
+    
+    .nextsteps{grid-column: 1 / 3;
+		  grid-row: 116 /121;
+    }
+    
+    .videocontainer{grid-column: 1 / 3;
+		  grid-row: 85 /95
+    }
+    
+    .iosdevice {
+        grid-column: 3 / 6;
+		  grid-row: 116 /121;
+        text-align: right;
+    }
+    
+    
+    
+    
+        
+  }
+
+@media all and (max-aspect-ratio: 4/3) {
+         
+    .wrapper {
+                justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-row-gap:0;
+                margin: 0 auto;
+                grid-template-columns: repeat(4,calc((100vh/3)*0.74916)); /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/30) ;
+                margin-right:calc(100vw/30);
+                }
+         
+    .box16{
+                grid-column: 1 / -1;
+		          grid-row: 1;
+		          display: grid;
+                grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		      grid-column: 1 / 2;
+		      grid-row: 1;
+                }
+
+	.box18 {
+	           grid-column: 3 / 4;
+		      grid-row: 1;
+                justify-self: end;
+                margin-top: 5px;
+	           } 
+            
+    .box1 {
+                display: none;
+                }
+
+    .box2 {
+                display: none;
+                }
+    
+    .box3 {
+                display: none;
+                }
+    .box4 {
+                display: none;
+                }
+    .box5 {
+                display: none;
+                }
+    .box6 {      grid-column: 1 / 2;
+		      grid-row: 8 /16;
+       
+
+                }
+    .box7 {
+                grid-column: 2 / 3;
+		      grid-row: 8 /16;
+                }
+    .box8 {     grid-column: 3 / 4;
+		          grid-row: 8 /16;
+
+                }
+    .box9 {       grid-column: 4 / 5;
+		          grid-row: 8 / 11;
+                object-fit: fill;
+        /*height: 0%;*/
+
+                }
+        
+    
+    
+    .box10 {
+                 grid-column: 4 / 5;
+		          grid-row: 13 /16;
+      
+                }
+    .box11{
+
+                }
+    .box12{
+
+                }
+    
+    .box13{
+
+                }
+    .box14{
+                display: none;
+                }
+    .box15{
+                display: none;
+                }   
+    .box16{
+                } 
+    
+ 
+    }
+    
+    
+    
+    @media all and (max-aspect-ratio: 8/7) {
+         
+    .wrapper {
+                justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-row-gap:0;
+                margin: 0 auto;
+                grid-template-columns: repeat(3,calc((100vh/3)*0.74916)); /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/30) ;
+                margin-right:calc(100vw/30);
+                }
+         
+    .box16{
+                grid-column: 1 / -1;
+		          grid-row: 1;
+		          display: grid;
+                grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		          grid-column: 1 / 2;
+		          grid-row: 1;
+                }
+
+	.box18 {
+                grid-column: 3 / 4;
+		          grid-row: 1;
+                    justify-self: end;
+                margin-top: 5px;
+	           } 
+            
+    .box1 {
+                display: none;
+                }
+
+    .box2 {
+                display: none;
+                }
+    
+    .box3 {
+                display: none;
+                }
+    .box4 {
+                display: none;
+                }
+    .box5 {
+                display: none;
+                }
+    .box6 {        grid-column: 1 / 2;
+		          grid-row: 8 /16;
+
+                }
+    .box7 {
+                grid-column: 2 / 3;
+		          grid-row: 8 /16;
+                }
+    .box8 {      grid-column: 3 / 4;
+		          grid-row: 8 /11;
+
+                }
+    .box9 {       grid-column: 3 / 4;
+		          grid-row: 13 / 16;
+       
+
+                }
+    .box10 {
+                grid-column: 3 / 4;
+		      grid-row: 18 /21;
+                      
+
+                }
+    .box11{
+
+                }
+    .box12{
+
+                }
+    
+    .box13{
+
+                }
+    .box14{
+                display: none;
+                }
+    .box15{
+                display: none;
+                }   
+    .box16{
+                } 
+    
+ 
+    }
+    
+    @media all and (max-aspect-ratio: 4/5) {
+         
+    .wrapper {
+                justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-gap:15px;
+                margin: 0 auto;
+                grid-template-columns: repeat(2,calc((100vh/3)*0.74916)); /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/15) ;
+                margin-right:calc(100vw/15);
+                }
+         
+    .box16{
+                grid-column: 1 / -1;
+		          grid-row: 1;
+		          display: grid;
+                grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		      grid-column: 1 / 2;
+		      grid-row: 1;
+                }
+
+	.box18 {
+	           grid-column: 3 / 4;
+		      grid-row: 1;
+                justify-self: end;
+                margin-top: 5px;
+	           } 
+            
+    .box1 {
+                display: none;
+                }
+
+    .box2 {
+                display: none;
+                }
+    
+    .box3 {
+                display: none;
+                }
+    .box4 {
+                display: none;
+                }
+    .box5 {
+                display: none;
+                }
+    .box6 {         grid-column: 1 / 2;
+		          grid-row: 3 /7;
+
+                }
+    .box7 {
+                    grid-column: 2 / 3;
+		              grid-row: 3 /7;
+                }
+    .box8   {       grid-column: 1 / 2;
+		              grid-row: 8 /12;
+
+                }
+    .box9 {         grid-column: 2 / 3;
+		              grid-row: 8 / 15;
+       
+
+                }
+    .box10 {
+                       grid-column: 1 / 2;
+		              grid-row: 15 /24;
+                      
+
+                }
+    .box11{
+
+                }
+    .box12{
+
+                }
+    
+    .box13{
+
+                }
+    .box14{
+                display: none;
+                }
+    .box15{
+                display: none;
+                }   
+    .box16{
+                } 
+    
+ 
+    }
+    
+    @media all and (max-width:415px) {
+         
+    .wrapper {
+                justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-gap:15px;
+                margin: 0 auto;
+                grid-template-columns: 100%; /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/6) calc(100vh/6) calc(100vh/6) calc(100vh/6) calc(100vh/6) calc(100vh/6);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/15) ;
+                margin-right:calc(100vw/15);
+                }
+         
+    .box16{
+                grid-column: 1;
+		          grid-row: 1;
+		          display: grid;
+                grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		      grid-column: 1 / 2;
+		      grid-row: 1;
+                }
+
+	.box18 {
+	           grid-column: 3 / 4;
+		      grid-row: 1;
+                justify-self: end;
+                margin-top: 5px;
+	           } 
+            
+    .box1 {
+                display: none;
+                }
+
+    .box2 {
+                display: none;
+                }
+    
+    .box3 {
+                display: none;
+                }
+    .box4 {
+                display: none;
+                }
+    .box5 {
+                display: none;
+                }
+    .box6 {         /*grid-column: 1 / 2;
+		          grid-row: 3 /5;*/
+display: none;
+                }
+    .box7 {
+                    /*grid-column: 1 / 2;
+		              grid-row: 6 /8;*/
+        display: none;
+                }
+    .box8   {       /*grid-column: 1 / 2;
+		              grid-row: 9 /11;*/
+        display: none;
+                }
+    .box9 {        /* grid-column: 1 / 2;
+		              grid-row: 12 / 15;*/
+        display: none;
+       
+
+                }
+    .box10 {
+                       grid-column: 1 / 2;
+		              grid-row: 2 /5;
+                      
+
+                }
+    .box11{
+
+                }
+    .box12{
+
+                }
+    
+    .box13{
+
+                }
+    .box14{
+                display: none;
+                }
+    .box15{
+                display: none;
+                }   
+    .box16{
+                } 
+    
+ 
+    }
+    
+    
+    
+    
+    
+    }
+    
+ 
+     
+
+    @supports (display: grid) {
+        .wrapper > * {
+                        width: auto;
+                        margin: 0;
+                        }
+    } 
+    
+    
+        .wrapper > div img {
+                                max-width: 120%;
+                                max-height: 120%;
+                            }*/
+    
+        /*.wrapper > div {
+                            background-color: lightgrey;
+                            padding: 1em;*/
+                        }
+    
+        /*.wrapper > div:nth-child(even){
+                            background: grey;
+                        }*/
+    
+
+
+        .object-fit_fill { object-fit: fill }
+        .object-fit_contain { object-fit: contain }
+        .object-fit_cover { object-fit: cover }
+        .object-fit_none { object-fit: none }
+        .object-fit_scale-down { object-fit: scale-down }
+
+    
+        img { height: 100%;}
+
+        img[class] {width: 100%;}
+
+        .image {
+                    float: left;
+                    width: 40%;
+            margin: 0 30px 20px 0;}
+            
+.fade-in1st {
+  animation: fadeIn ease-in 1500ms;
+  -webkit-animation: fadeIn ease-in 1500ms;
+       -webkit-animation-delay: 1s;
+  -moz-animation: fadeIn ease-in 1500ms;
+  -o-animation: fadeIn ease-in 1500ms;
+  -ms-animation: fadeIn ease-in 1500ms;
+        animation-delay: 1s;
+}
+
+.fade-in2nd {
+    
+  animation: fadeIn ease-in 2000ms;
+  -webkit-animation: fadeIn ease-in 2000ms;
+    -webkit-animation-delay: 1200ms;
+  -moz-animation: fadeIn ease-in 2000ms;
+  -o-animation: fadeIn ease-in 2000ms;
+  -ms-animation: fadeIn ease-in 2000ms;
+    animation-delay: 1200ms;
+}
+
+.fade-in3rd {
+    
+  animation: fadeIn ease-in 2000ms;
+  -webkit-animation: fadeIn ease-in 2000ms;
+    -webkit-animation-delay: 1400ms;
+  -moz-animation: fadeIn ease-in 2000ms;
+  -o-animation: fadeIn ease-in 2000ms;
+  -ms-animation: fadeIn ease-in 2000ms;
+    animation-delay: 1400ms;
+}
+
+.fade-in4th {
+    
+  animation: fadeIn ease-in 2000ms;
+  -webkit-animation: fadeIn ease-in 2000ms;
+    -webkit-animation-delay: 1600ms;
+  -moz-animation: fadeIn ease-in 2000ms;
+  -o-animation: fadeIn ease-in 2000ms;
+  -ms-animation: fadeIn ease-in 2000ms;
+    animation-delay: 1600ms;
+}
+
+.fade-in5th {
+    
+  animation: fadeIn ease-in 2000ms;
+  -webkit-animation: fadeIn ease-in 2000ms;
+    -webkit-animation-delay: 1800ms;
+  -moz-animation: fadeIn ease-in 2000ms;
+  -o-animation: fadeIn ease-in 2000ms;
+  -ms-animation: fadeIn ease-in 2000ms;
+    animation-delay: 1800ms;
+}
+
+
+@keyframes fadeIn{
+                    0% {
+                        opacity:0;
+                                    }
+                    100% {
+                        opacity:1;
+                                    }
+                }
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+
+
+
+
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    </style>
+    
+</head>
+    
+    
+<body bgcolor="F3F3F3">
+    
+    <div class="wrapper">
+        
+        <div class="box box1">
+        </div>
+        
+        <div class="box box2">
+        </div>
+         
+        <div class="box box3">
+        </div>
+        
+        <div class="box box4">
+        </div>
+        
+        <div class="box box5">
+        </div>
+        
+        <div class="box box6">
+          
+            <a style="text-decoration:none" href="Industrial_Design_&_Technology.html"> 
+                <img src="/IDT_Folder/Stingray_Folder/cover.png" class="object-fit_cover"/>
+            </a>
+        </div>
+        
+        <div class="covertextbox">
+          
+            <h1>1930’s Streamline themed CAD model
+</h1>
+            <h2>Individual Work, 5 weeks</h2>
+        </div>
+            
+        
+        <div class="box box7">
+             
+            <a style="text-decoration:none" href="UI_UX.html"> 
+                <img src="/IDT_Folder/Stingray_Folder/ideation.png" class="object-fit_contain">
+            </a>
+       
+            
+             </div>
+        
+        <div class="box box8">
+            <div class="style fade-in3rd">
+            <a style="text-decoration:none" href="Photography.html">
+                <h1>IDEATION</h1>
+                <h2>FINALISING DESIGN DIRECTION</h2>
+                <p>This page is a visual representation of early exploration of the form I later chose to develop.  A hybrid of classic style in directional form evolved into a more contemporary form maintaining its classical heritage. Through my ideation, I have been inspired by the directional form of a stingray and choose to incorporate this in my final design. </p>
+            </a>
+        </div></div>
+        
+        <div class="box box9">
+           <div class="style fade-in3rd">
+            <a style="text-decoration:none" href="Photography.html">
+                <h1>FORM</h1>
+                <h2>USING 1930’s STREAMLINE TREND</h2>
+                <p>This brief has a predominant emphasis on the aesthetical properties of the industrial design. The product must be developed using key elements of the 1930’s Streamline design trend, giving it evident directional motion. The final product will result in a CAD Surface model with all internal components fitted.   </p>
+            </a>
+        
+        </div></div>
+            
+    
+
+        
+        <div class="box box12">
+            <img src="/IDT_Folder/Stingray_Folder/modelling2.png" class="object-fit_cover">
+        </div>
+           
+        <div class="box box13">
+            <img src="/IDT_Folder/Stingray_Folder/modelling1.png" class="object-fit_cover">
+        </div>
+           
+        <div class="box box14">
+            <h1>MODELLING</h1>
+            <h2>BLUE FOAM</h2>
+            <p>Modelling Stingray in bluefoam allowed for a greater appreciation of form and proportions. I allowed the blue foam model to evolve from its original design which provided me with the creative freedom to explore. An appreciation of the products manufacturing was evident in this process and carried onto the product development stage.</p>
+        </div>
+           
+        <div class="box box15">
+        </div>
+             
+        <div class="box box16">
+                 
+                 <div class=" box box17">
+                     <a style="text-decoration:none" href="Industrial_Design___Technology.html"> 
+                         <h1>Stingray</h1> 
+                         <p>STREAMLINE THEMED FORM</p>
+                         <img src="/IDT_Folder/Blaze_Folder/logo.svg" style="width:20px">
+                     </a>
+                 </div>
+                 
+                <div class="box box18">
+                    <img src="navigation_button.svg" style="width:16px">
+                 </div>
+        </div>
+
+          
+        
+        <div class="surfacemodelling1"><img src="/IDT_Folder/Stingray_Folder/sufracemodelling1.png" class="object-fit_cover">
+        </div>
+        <div class="surfacemodelling2">
+            <h1>SURFACE MODELLING</h1>
+            <h2>SOLIDWORKS</h2>
+            <p>The next process in the product development phase is to suface model using Solidworks. A great deal of skill and knowledge was developed through this process. An appreciation of continuous curvature was applied throughout the model. 
+</p>
+            
+        </div>
+         <div class="hero1"><img src="/IDT_Folder/Stingray_Folder/hero1.png" class="object-fit_cover">
+        </div>
+         <div class="hero2">
+               <a rel="ar" href="redchair.usdz">
+             <img src="/IDT_Folder/Stingray_Folder/hero2.png" class="object-fit_cover">
+            </a>
+        </div>
+        
+         <div class="nextsteps"><h2>Next Steps:</h2><p>After the development of the surface model I now begin shelling the model to contain the electrical components of the speaker. Manufacturing processes will be considered and modelled. </p>
+        </div>
+        
+        <div class="videocontainer">
+        <div class="video-container"><iframe width="853" height="480" src="https://www.youtube.com/embed/ccdNZHqVOSE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+        
+        
+        
+        <div class="iosdevice"><p>Got iOS12? Click the image above to view it in AR</p> </div>
+        
+        
+    </div>
+</body>

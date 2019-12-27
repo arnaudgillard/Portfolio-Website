@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AGP</title>
+
+<style>
+    
+    *, *:before, *:after {
+                        box-sizing: border-box;
+                    }
+    
+
+    
+    
+    
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,600');
+            h1 {font-family: 'IBM Plex Sans', sans-serif; color: black; font-size: 2.5em; font-weight: 300;}
+            h2 {font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 1em; color: black;}
+            h3 {font-family: 'IBM Plex Sans', sans-serif; color: black;}
+            h4 {font-family: 'IBM Plex Sans', sans-serif; font-size: 1em; color: black;}
+            h5 {font-family: 'IBM Plex Sans', sans-serif; color: black;}
+            p  {font-family: 'IBM Plex Sans', sans-serif; color: black;}
+    psm {font-family: 'IBM Plex Sans', sans-serif; color: black; font-size: 0.75em;}
+            figcaption {font-family: 'IBM Plex Sans', sans-serif; font-size: 1em; color: black; font-weight: 300;}
+    
+            figcaption {
+                        margin-top: 1em;
+                        }
+    
+            .nested  {
+                        display:grid;
+                        grid-template-columns: repeat(5,1fr);
+                        /*grid-auto-rows: calc (100%/3);*/
+                        grid-gap:1em;  
+                        }
+    
+            .nested > div {
+                            border: #333 1px solid;
+                            padding: 1em;
+                            }
+    
+    .nestedideation  {
+                        display:grid;
+                        grid-template-columns: repeat(2,1fr);
+                        grid-template-rows:repeat(2,1fr) ;*/
+                        grid-gap:1em;  
+                        }
+    
+            .nestedideation > div {
+                            border: #333 1px solid;
+                            padding: 1em;
+                            }
+    
+ 
+
+
+@media all and (min-aspect-ratio: 4/3) {
+    .wrapper {
+                  justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-row-gap:0%;
+                margin: 0 auto;
+                grid-template-columns: repeat(5,calc((100vh/3)*0.74916)); /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/30) ;
+                margin-right:calc(100vw/30);
+    }
+    
+    
+    .cover_image{      grid-column:1 / 6;
+		              grid-row: 6 /23;
+                            /* justify-self:end; */
+                    }
+    .image2{      grid-column:1 / 4;
+		              grid-row: 24 /35;
+                            /* justify-self:end; */
+                    }
+    .image3{      grid-column:4 / 6;
+		              grid-row: 24 /45;
+                            /* justify-self:end; */
+                    }
+        .image4{      grid-column:1 / 4;
+		              grid-row: 36 /50;
+                            /* justify-self:end; */
+                    }
+    
+    
+    
+    .box16{
+                    grid-column: 1 / -1;
+		          grid-row: 1;
+		          display: grid;
+                    grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		          grid-column: 1 / 2;
+		          grid-row: 1;
+                }
+
+	.box18 {
+	               grid-column: 3 / 4;
+		          grid-row: 1;
+                    justify-self: end;
+                    margin-top: 5px;
+	           } 
+    
+    
+        .box1{
+                    /*align-self:start;  */
+                    display: none;
+                    }
+    
+        .box2 {
+                    /* align-self:end; */
+                    /*grid-column: 3;*/
+                    /*grid-row: 1/3;*/
+                     display: none;
+                    }
+    
+        .box3{
+                    /* justify-self:end; */
+                   display: none;
+                    }
+    
+        .box4{
+                    /* justify-self:end; */
+                    display: none;
+                    }
+    
+       
+    
+@media all and (max-aspect-ratio: 4/3) {
+         
+    .wrapper {
+                justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-row-gap:0;
+                margin: 0 auto;
+                grid-template-columns: repeat(4,calc((100vh/3)*0.74916)); /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/30) ;
+                margin-right:calc(100vw/30);
+                }
+         
+    .box16{
+                grid-column: 1 / -1;
+		          grid-row: 1;
+		          display: grid;
+                grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		      grid-column: 1 / 2;
+		      grid-row: 1;
+                }
+
+	.box18 {
+	           grid-column: 3 / 4;
+		      grid-row: 1;
+                justify-self: end;
+                margin-top: 5px;
+	           } 
+            
+    .box1 {
+                display: none;
+                }
+
+    .box2 {
+                display: none;
+                }
+    
+    .box3 {
+                display: none;
+                }
+    .box4 {
+                display: none;
+                }
+    .box5 {
+                display: none;
+                }
+    .box6 {      grid-column: 1 / 2;
+		      grid-row: 8 /16;
+       
+
+                }
+   
+    .box8 {     grid-column: 3 / 4;
+		          grid-row: 8 /16;
+
+                }
+    .box9 {       grid-column: 4 / 5;
+		          grid-row: 8 / 11;
+                object-fit: fill;
+        /*height: 0%;*/
+
+                }
+        
+    
+    
+    .box10 {
+                 grid-column: 4 / 5;
+		          grid-row: 13 /16;
+      
+                }
+    .box11{
+
+                }
+    .box12{
+
+                }
+    
+    .box13{
+
+                }
+    .box14{
+                display: none;
+                }
+    .box15{
+                display: none;
+                }   
+    .box16{
+                } 
+    
+ 
+    }
+    
+    
+    
+    @media all and (max-aspect-ratio: 8/7) {
+         
+    .wrapper {
+                justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-row-gap:0;
+                margin: 0 auto;
+                grid-template-columns: repeat(3,calc((100vh/3)*0.74916)); /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/30) ;
+                margin-right:calc(100vw/30);
+                }
+         
+    .box16{
+                grid-column: 1 / -1;
+		          grid-row: 1;
+		          display: grid;
+                grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		          grid-column: 1 / 2;
+		          grid-row: 1;
+                }
+
+	.box18 {
+                grid-column: 3 / 4;
+		          grid-row: 1;
+                    justify-self: end;
+                margin-top: 5px;
+	           } 
+            
+    .box1 {
+                display: none;
+                }
+
+    .box2 {
+                display: none;
+                }
+    
+    .box3 {
+                display: none;
+                }
+    .box4 {
+                display: none;
+                }
+    .box5 {
+                display: none;
+                }
+    .box6 {        grid-column: 1 / 2;
+		          grid-row: 8 /16;
+
+                }
+    .box7 {
+                grid-column: 2 / 3;
+		          grid-row: 8 /16;
+                }
+    .box8 {      grid-column: 3 / 4;
+		          grid-row: 8 /11;
+
+                }
+    .box9 {       grid-column: 3 / 4;
+		          grid-row: 13 / 16;
+       
+
+                }
+    .box10 {
+                grid-column: 3 / 4;
+		      grid-row: 18 /21;
+                      
+
+                }
+    .box11{
+
+                }
+    .box12{
+
+                }
+    
+    .box13{
+
+                }
+    .box14{
+                display: none;
+                }
+    .box15{
+                display: none;
+                }   
+    .box16{
+                } 
+    
+ 
+    }
+    
+    @media all and (max-aspect-ratio: 4/5) {
+         
+    .wrapper {
+                justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-gap:15px;
+                margin: 0 auto;
+                grid-template-columns: repeat(2,calc((100vh/3)*0.74916)); /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/15) ;
+                margin-right:calc(100vw/15);
+                }
+         
+    .box16{
+                grid-column: 1 / -1;
+		          grid-row: 1;
+		          display: grid;
+                grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		      grid-column: 1 / 2;
+		      grid-row: 1;
+                }
+
+	.box18 {
+	           grid-column: 3 / 4;
+		      grid-row: 1;
+                justify-self: end;
+                margin-top: 5px;
+	           } 
+            
+    .box1 {
+                display: none;
+                }
+
+    .box2 {
+                display: none;
+                }
+    
+    .box3 {
+                display: none;
+                }
+    .box4 {
+                display: none;
+                }
+    .box5 {
+                display: none;
+                }
+    .box6 {         grid-column: 1 / 2;
+		          grid-row: 3 /7;
+
+                }
+    .box7 {
+                    grid-column: 2 / 3;
+		              grid-row: 3 /7;
+                }
+    .box8   {       grid-column: 1 / 2;
+		              grid-row: 8 /12;
+
+                }
+    .box9 {         grid-column: 2 / 3;
+		              grid-row: 8 / 15;
+       
+
+                }
+    .box10 {
+                       grid-column: 1 / 2;
+		              grid-row: 15 /24;
+                      
+
+                }
+    .box11{
+
+                }
+    .box12{
+
+                }
+    
+    .box13{
+
+                }
+    .box14{
+                display: none;
+                }
+    .box15{
+                display: none;
+                }   
+    .box16{
+                } 
+    
+ 
+    }
+    
+    @media all and (max-width:415px) {
+         
+    .wrapper {
+                justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-gap:15px;
+                margin: 0 auto;
+                grid-template-columns: 100%; /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/6) calc(100vh/6) calc(100vh/6) calc(100vh/6) calc(100vh/6) calc(100vh/6);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/15) ;
+                margin-right:calc(100vw/15);
+                }
+         
+    .box16{
+                grid-column: 1;
+		          grid-row: 1;
+		          display: grid;
+                grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		      grid-column: 1 / 2;
+		      grid-row: 1;
+                }
+
+	.box18 {
+	           grid-column: 3 / 4;
+		      grid-row: 1;
+                justify-self: end;
+                margin-top: 5px;
+	           } 
+            
+    .box1 {
+                display: none;
+                }
+
+    .box2 {
+                display: none;
+                }
+    
+    .box3 {
+                display: none;
+                }
+    .box4 {
+                display: none;
+                }
+    .box5 {
+                display: none;
+                }
+    .box6 {         /*grid-column: 1 / 2;
+		          grid-row: 3 /5;*/
+display: none;
+                }
+    .box7 {
+                    /*grid-column: 1 / 2;
+		              grid-row: 6 /8;*/
+        display: none;
+                }
+    .box8   {       /*grid-column: 1 / 2;
+		              grid-row: 9 /11;*/
+        display: none;
+                }
+    .box9 {        /* grid-column: 1 / 2;
+		              grid-row: 12 / 15;*/
+        display: none;
+       
+
+                }
+    .box10 {
+                       grid-column: 1 / 2;
+		              grid-row: 2 /5;
+                      
+
+                }
+    .box11{
+
+                }
+    .box12{
+
+                }
+    
+    .box13{
+
+                }
+    .box14{
+                display: none;
+                }
+    .box15{
+                display: none;
+                }   
+    .box16{
+                } 
+    
+ 
+    }
+    
+    
+    
+    
+    
+    }
+    
+ 
+     
+
+    @supports (display: grid) {
+        .wrapper > * {
+                        width: auto;
+                        margin: 0;
+                        }
+    } 
+    
+    
+        .wrapper > div img {
+                                max-width: 120%;
+                                max-height: 120%;
+                            }*/
+    
+        /*.wrapper > div {
+                            background-color: lightgrey;
+                            padding: 1em;*/
+                        }
+    
+        /*.wrapper > div:nth-child(even){
+                            background: grey;
+                        }*/
+    
+
+
+        .object-fit_fill { object-fit: fill }
+        .object-fit_contain { object-fit: contain }
+        .object-fit_cover { object-fit: cover }
+        .object-fit_none { object-fit: none }
+        .object-fit_scale-down { object-fit: scale-down }
+
+    
+        img { height: 100%;}
+
+        img[class] {width: 100%;}
+
+        .image {
+                    float: left;
+                    width: 40%;
+            margin: 0 30px 20px 0;}
+            
+.fade-in1st {
+  animation: fadeIn ease-in 1500ms;
+  -webkit-animation: fadeIn ease-in 1500ms;
+       -webkit-animation-delay: 1s;
+  -moz-animation: fadeIn ease-in 1500ms;
+  -o-animation: fadeIn ease-in 1500ms;
+  -ms-animation: fadeIn ease-in 1500ms;
+        animation-delay: 1s;
+}
+
+.fade-in2nd {
+    
+  animation: fadeIn ease-in 2000ms;
+  -webkit-animation: fadeIn ease-in 2000ms;
+    -webkit-animation-delay: 1200ms;
+  -moz-animation: fadeIn ease-in 2000ms;
+  -o-animation: fadeIn ease-in 2000ms;
+  -ms-animation: fadeIn ease-in 2000ms;
+    animation-delay: 1200ms;
+}
+
+.fade-in3rd {
+    
+  animation: fadeIn ease-in 2000ms;
+  -webkit-animation: fadeIn ease-in 2000ms;
+    -webkit-animation-delay: 1400ms;
+  -moz-animation: fadeIn ease-in 2000ms;
+  -o-animation: fadeIn ease-in 2000ms;
+  -ms-animation: fadeIn ease-in 2000ms;
+    animation-delay: 1400ms;
+}
+
+.fade-in4th {
+    
+  animation: fadeIn ease-in 2000ms;
+  -webkit-animation: fadeIn ease-in 2000ms;
+    -webkit-animation-delay: 1600ms;
+  -moz-animation: fadeIn ease-in 2000ms;
+  -o-animation: fadeIn ease-in 2000ms;
+  -ms-animation: fadeIn ease-in 2000ms;
+    animation-delay: 1600ms;
+}
+
+.fade-in5th {
+    
+  animation: fadeIn ease-in 2000ms;
+  -webkit-animation: fadeIn ease-in 2000ms;
+    -webkit-animation-delay: 1800ms;
+  -moz-animation: fadeIn ease-in 2000ms;
+  -o-animation: fadeIn ease-in 2000ms;
+  -ms-animation: fadeIn ease-in 2000ms;
+    animation-delay: 1800ms;
+}
+
+
+@keyframes fadeIn{
+                    0% {
+                        opacity:0;
+                                    }
+                    100% {
+                        opacity:1;
+                                    }
+                }
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+
+
+
+
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    </style>
+    
+</head>
+    
+    
+<body bgcolor="F3F3F3">
+    
+    <div class="wrapper">
+        
+        <div class="box box1">
+        </div>
+        
+        <div class="box box2">
+        </div>
+         
+        <div class="box box3">
+        </div>
+        
+        <div class="box box4">
+        </div>
+        
+        <div class="box cover_image">
+            <a style="text-decoration:none" href="Industrial_Design_&_Technology.html"> 
+                <img src="/Climate_Action_Folder/cover.jpeg" class="object-fit_cover"/>
+            </a>
+        </div>
+        
+        <div class="box image2">
+            <a style="text-decoration:none" href="Industrial_Design_&_Technology.html"> 
+                <img src="/Climate_Action_Folder/Image2.jpeg" class="object-fit_cover"/>
+            </a>
+        </div>
+         <div class="box image3">
+            <a style="text-decoration:none" href="Industrial_Design_&_Technology.html"> 
+                <img src="/Climate_Action_Folder/Image3.jpeg" class="object-fit_cover"/>
+            </a>
+        </div>
+          <div class="box image4">
+            <a style="text-decoration:none" href="Industrial_Design_&_Technology.html"> 
+                <img src="/Climate_Action_Folder/Dieter.jpg" class="object-fit_cover"/>
+            </a>
+        </div>
+        
+             
+        <div class="box box16">
+                 
+                 <div class=" box box17">
+                     <a style="text-decoration:none" href="index.html"> 
+                         <h1>Climate Action</h1> 
+                         <p>A future worth fighting for</p>
+                     </a>
+                 </div>
+                 
+                <div class="box box18">
+                    <img src="navigation_button.svg" style="width:16px">
+                 </div>
+        </div>
+
+        
+    </div>
+</body>

@@ -1,0 +1,834 @@
+*, *:before, *:after {
+                        box-sizing: border-box;
+                    }
+
+.box88 {
+                position: sticky;
+                top: calc(100vh*0.05);
+                left:100vw;
+         justify-self: flex-end;
+	       } 
+    
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,600');
+            h1 {font-family: 'IBM Plex Sans', sans-serif; color: black; font-size: 2.5em; font-weight: 300;}
+            h2 {font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 1em; color: black;}
+            h3 {font-family: 'IBM Plex Sans', sans-serif; color: black;}
+            h4 {font-family: 'IBM Plex Sans', sans-serif; font-size: 1em; color: black;}
+            h5 {font-family: 'IBM Plex Sans', sans-serif; color: black;}
+            p  {font-family: 'IBM Plex Sans', sans-serif; color: black; font-size:0.8em; font-weight:100;}
+            navigationtext  {font-family: 'IBM Plex Sans', sans-serif; color: black; font-size:0.8em; font-weight:350; }
+            figcaption {font-family: 'IBM Plex Sans', sans-serif; font-size: 1em; color: black; font-weight: 300;}
+    
+            figcaption {
+                        margin-top: 1em;
+                        }
+    
+            .nested  {
+                        display:grid;
+                        grid-template-columns: repeat(5,1fr);
+                        /*grid-auto-rows: calc (100%/3);*/
+                        grid-gap:1em;  
+                        }
+    
+            .nested > div {
+                            border: #333 1px solid;
+                            padding: 1em;
+                            }
+    
+
+
+@media all and (min-aspect-ratio: 4/3) {
+    
+     
+    
+    
+    
+    
+    
+    
+    
+     .sidepanel  {
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            text-align: right;
+            right: 0px;
+            top:0px;
+            height: 100%;
+            background-color: lightgray;
+            overflow-x: hidden;
+            transition: 0.5s;
+         
+         
+         display: grid;
+         grid-area: center; 
+         grid-row-gap: 0;
+         grid-template-columns: 1fr;
+         grid-auto-rows: 16.5% 1fr 1fr 1fr 1fr 1fr 50%;
+         grid-column-gap: 0;
+
+         
+}
+
+    
+        .sidepanelclosebutton {
+            padding-right: 8%;
+            align-self: center;
+            grid-column:1;
+            grid-row:1/2; 
+            justify-content: flex-end;
+
+        }
+    .sidepanelIDT {
+        padding-right: 8%;
+        grid-column:1;
+        grid-row:2/3; 
+            align-self: right;
+
+        }
+    
+
+    
+      .sidepanelUX {
+          padding-right: 8%;
+        grid-column:1;
+        grid-row:3/4; 
+            align-self: right;
+
+        }
+    
+    /*.sidepanelIDT :hover {
+        height: 200px;
+            display: grid;
+            grid-area: center; 
+            grid-row-gap: 0;
+            grid-template-columns: 1fr;
+            grid-auto-rows: 1fr 1fr 1fr 1fr;
+            grid-column-gap: 0;
+    background: red;} */
+    
+    /*
+    .sidepanelUX :hover {height: calc(100vh*0.2);}
+    .sidepanelPHOTOGRAPHY :hover {height: calc(100vh*0.2);}
+    .sidepanelCLIMATEACTION :hover {height: calc(100vh*0.2);}
+     .sidepanelPROFILE :hover {height: calc(100vh*0.2);}
+    
+    */
+    
+
+    
+    
+    
+    .sidepanelPHOTOGRAPHY {
+        padding-right: 8%;
+        grid-column:1;
+        grid-row:4/5; 
+            align-self: right;
+
+        }
+    .sidepanelCLIMATEACTION {
+        padding-right: 8%;
+        grid-column:1;
+        grid-row:5/6; 
+            align-self: right;
+
+        }
+    .sidepanelPROFILE {
+        padding-right: 8%;
+        grid-column:1;
+        grid-row:6/7; 
+            align-self: right;
+
+        }
+    .sidepanelWHITESPACE {
+        grid-column:1;
+        grid-row:7/8; 
+            align-self: right;
+
+        }
+    
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block; /*this can be changed to "block"*/ 
+  transition: 0.3s;
+   
+    }
+    
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #F3F3F3;
+  padding: 10px 10px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:white;
+}
+    
+    
+    
+    
+    
+    
+    
+.gallerycontainer{
+position: relative;
+/*Add a height attribute and set to largest image's height to prevent overlaying*/
+}
+
+.thumbnail img{
+border: 1px solid white;
+    width: 100px;
+}
+
+.thumbnail:hover{
+background-color: transparent;
+}
+
+.thumbnail:hover img{
+
+}
+
+.thumbnail span{ /*CSS for enlarged image*/
+position: absolute;
+left: -1000px;
+visibility: hidden;
+}
+
+.thumbnail span img{ /*CSS for enlarged image*/
+border-width: 0;
+padding: 2px;
+}
+
+.thumbnail:hover span{ /*CSS for enlarged image*/
+visibility: visible;
+top: 0;
+left: 5px; /*position where enlarged image should offset horizontally */
+z-index: 50;
+}    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .wrapper {
+                  justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-row-gap:0%;
+                margin: 0 auto;
+                grid-template-columns: repeat(5,calc((100vh/3)*0.74916)); /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/30) ;
+                margin-right:calc(100vw/30);
+    }
+    
+    
+    .boxsidebar {
+        grid-column:1/-1;
+        grid-row:1;
+        
+    }
+    
+    .box16{
+                    grid-column: 1 / -1;
+		          grid-row: 1;
+		          display: grid;
+                    grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		          grid-column: 1 / 2;
+		          grid-row: 1;
+                }
+    
+ .box6:hover {
+  box-shadow: 10px 10px 0px lightgrey;
+}
+    
+    .box7:hover {
+  box-shadow: 10px 10px 0px lightgrey;
+}
+ .box8:hover {
+  box-shadow: 10px 10px 0px lightgrey;
+}
+    
+    .box9:hover {
+  box-shadow: 10px 10px 0px lightgrey;
+}
+    
+        .box10:hover {
+  box-shadow: 10px 10px 0px lightgrey;
+}
+    
+    
+        .box1{
+                    /*align-self:start;  */
+                    display: none;
+                    }
+    
+        .box2 {
+                    /* align-self:end; */
+                    /*grid-column: 3;*/
+                    /*grid-row: 1/3;*/
+                     display: none;
+                    }
+    
+        .box3{
+                    /* justify-self:end; */
+                   display: none;
+                    }
+    
+        .box4{
+                    /* justify-self:end; */
+                    display: none;
+                    }
+    
+        .box5{
+                    /* justify-self:end; */
+                     display: none;
+                    }
+        .box6{      grid-column: 1 / 2;
+		              grid-row: 8 /16;
+        
+             
+            
+            
+                    /* justify-self:end; */
+                    }
+    
+        .box7{      grid-column: 2 / 3;
+		              grid-row: 8 /16;
+                    /* justify-self:end; */
+                    }
+        .box8{      grid-column: 3 / 4;
+		              grid-row: 8 /16;
+                    /* justify-self:end; */
+                    }
+        .box9{      grid-column: 4 / 5;
+		              grid-row: 8 /16;
+            animation-name :main_card;
+                    animation-duration: 50s;
+            
+                    /* justify-self:end; */
+                    }
+        .box10{     grid-column: 5 / 6;
+		              grid-row: 8 /16;
+                    /* justify-self:end; */
+                    }
+        .box11{
+                    /* justify-self:end; */
+                    }
+        .box12{
+                    /* justify-self:end; */
+                    }
+    
+        .box13{
+                    /* justify-self:end; */
+                    }
+    
+        .box14{
+                    /* justify-self:end; */
+                    }
+    
+        .box15{
+
+                    }
+    
+        
+  }
+
+@media all and (max-aspect-ratio: 4/3) {
+         
+    .wrapper {
+                justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-row-gap:0;
+                margin: 0 auto;
+                grid-template-columns: repeat(4,calc((100vh/3)*0.74916)); /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/30) ;
+                margin-right:calc(100vw/30);
+                }
+         
+    .box16{
+                grid-column: 1 / -1;
+		          grid-row: 1;
+		          display: grid;
+                grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		      grid-column: 1 / 2;
+		      grid-row: 1;
+                }
+
+	.box18 {
+	           grid-column: 3 / 4;
+		      grid-row: 1;
+                justify-self: end;
+                margin-top: 5px;
+	           } 
+    
+            
+    .box1 {
+                display: none;
+                }
+
+    .box2 {
+                display: none;
+                }
+    
+    .box3 {
+                display: none;
+                }
+    .box4 {
+                display: none;
+                }
+    .box5 {
+                display: none;
+                }
+    .box6 {      grid-column: 1 / 2;
+		      grid-row: 8 /16;
+       
+
+                }
+    .box7 {
+                grid-column: 2 / 3;
+		      grid-row: 8 /16;
+                }
+    .box8 {     grid-column: 3 / 4;
+		          grid-row: 8 /16;
+
+                }
+    .box9 {       grid-column: 4 / 5;
+		          grid-row: 8 / 11;
+                object-fit: fill;
+        /*height: 0%;*/
+
+                }
+        
+    
+    
+    .box10 {
+                 grid-column: 4 / 5;
+		          grid-row: 13 /16;
+      
+                }
+    .box11{
+
+                }
+    .box12{
+
+                }
+    
+    .box13{
+
+                }
+    .box14{
+                display: none;
+                }
+    .box15{
+                display: none;
+                }   
+    .box16{
+                } 
+    
+ 
+    }
+    
+    
+    
+    @media all and (max-aspect-ratio: 8/7) {
+         
+    .wrapper {
+                justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-row-gap:0;
+                margin: 0 auto;
+                grid-template-columns: repeat(3,calc((100vh/3)*0.74916)); /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/30) ;
+                margin-right:calc(100vw/30);
+                }
+         
+    .box16{
+                grid-column: 1 / -1;
+		          grid-row: 1;
+		          display: grid;
+                grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		          grid-column: 1 / 2;
+		          grid-row: 1;
+                }
+
+	.box18 {
+                grid-column: 3 / 4;
+		          grid-row: 1;
+                    justify-self: end;
+                margin-top: 5px;
+	           } 
+            
+    .box1 {
+                display: none;
+                }
+
+    .box2 {
+                display: none;
+                }
+    
+    .box3 {
+                display: none;
+                }
+    .box4 {
+                display: none;
+                }
+    .box5 {
+                display: none;
+                }
+    .box6 {        grid-column: 1 / 2;
+		          grid-row: 8 /16;
+
+                }
+    .box7 {
+                grid-column: 2 / 3;
+		          grid-row: 8 /16;
+                }
+    .box8 {      grid-column: 3 / 4;
+		          grid-row: 8 /11;
+
+                }
+    .box9 {       grid-column: 3 / 4;
+		          grid-row: 13 / 16;
+       
+
+                }
+    .box10 {
+                grid-column: 3 / 4;
+		      grid-row: 18 /21;
+                      
+
+                }
+    .box11{
+
+                }
+    .box12{
+
+                }
+    
+    .box13{
+
+                }
+    .box14{
+                display: none;
+                }
+    .box15{
+                display: none;
+                }   
+    .box16{
+                } 
+    
+ 
+    }
+    
+    @media all and (max-aspect-ratio: 4/5) {
+         
+    .wrapper {
+                justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-gap:15px;
+                margin: 0 auto;
+                grid-template-columns: repeat(2,calc((100vh/3)*0.74916)); /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/15) ;
+                margin-right:calc(100vw/15);
+                }
+         
+    .box16{
+                grid-column: 1 / -1;
+		          grid-row: 1;
+		          display: grid;
+                grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		      grid-column: 1 / 2;
+		      grid-row: 1;
+                }
+
+	.box18 {
+	           grid-column: 3 / 4;
+		      grid-row: 1;
+                justify-self: end;
+                margin-top: 5px;
+	           } 
+            
+    .box1 {
+                display: none;
+                }
+
+    .box2 {
+                display: none;
+                }
+    
+    .box3 {
+                display: none;
+                }
+    .box4 {
+                display: none;
+                }
+    .box5 {
+                display: none;
+                }
+    .box6 {         grid-column: 1 / 2;
+		          grid-row: 3 /7;
+
+                }
+    .box7 {
+                    grid-column: 2 / 3;
+		              grid-row: 3 /7;
+                }
+    .box8   {       grid-column: 1 / 2;
+		              grid-row: 8 /12;
+
+                }
+    .box9 {         grid-column: 2 / 3;
+		              grid-row: 8 / 15;
+       
+
+                }
+    .box10 {
+                       grid-column: 1 / 2;
+		              grid-row: 15 /24;
+                      
+
+                }
+    .box11{
+
+                }
+    .box12{
+
+                }
+    
+    .box13{
+
+                }
+    .box14{
+                display: none;
+                }
+    .box15{
+                display: none;
+                }   
+    .box16{
+                } 
+
+        
+        
+        
+    }
+    
+    @media all and (max-width:415px) {
+         
+    .wrapper {
+                justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-gap:15px;
+                margin: 0 auto;
+                grid-template-columns: 100%; /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/6) calc(100vh/6) calc(100vh/6) calc(100vh/6) calc(100vh/6) calc(100vh/6);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/15) ;
+                margin-right:calc(100vw/15);
+                }
+         
+    .box16{
+                grid-column: 1;
+		          grid-row: 1;
+		          display: grid;
+                grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		      grid-column: 1 / 2;
+		      grid-row: 1;
+                }
+
+	.box18 {
+	           grid-column: 3 / 4;
+		      grid-row: 1;
+                justify-self: end;
+                margin-top: 5px;
+	           } 
+            
+    .box1 {
+                display: none;
+                }
+
+    .box2 {
+                display: none;
+                }
+    
+    .box3 {
+                display: none;
+                }
+    .box4 {
+                display: none;
+                }
+    .box5 {
+                display: none;
+                }
+    .box6 {         /*grid-column: 1 / 2;
+		          grid-row: 3 /5;*/
+display: none;
+                }
+    .box7 {
+                    /*grid-column: 1 / 2;
+		              grid-row: 6 /8;*/
+        display: none;
+                }
+    .box8   {       /*grid-column: 1 / 2;
+		              grid-row: 9 /11;*/
+        display: none;
+                }
+    .box9 {        /* grid-column: 1 / 2;
+		              grid-row: 12 / 15;*/
+        display: none;
+       
+
+                }
+    .box10 {
+                       grid-column: 1 / 2;
+		              grid-row: 2 /5;
+                      
+
+                }
+    .box11{
+
+                }
+    .box12{
+
+                }
+    
+    .box13{
+
+                }
+    .box14{
+                display: none;
+                }
+    .box15{
+                display: none;
+                }   
+    .box16{
+                } 
+    
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    }
+    
+ 
+     
+
+    @supports (display: grid) {
+        .wrapper > * {
+                        width: auto;
+                        margin: 0;
+                        }
+    } 
+    
+    
+        .wrapper > div img {
+                                max-width: 120%;
+                                max-height: 120%;
+                            }*/
+    
+        /*.wrapper > div {
+                            background-color: lightgrey;
+                            padding: 1em;*/
+                        }
+    
+        /*.wrapper > div:nth-child(even){
+                            background: grey;
+                        }*/
+    
+
+
+        .object-fit_fill { object-fit: fill }
+        .object-fit_contain { object-fit: contain }
+        .object-fit_cover { object-fit: cover }
+        .object-fit_none { object-fit: none }
+        .object-fit_scale-down { object-fit: scale-down }
+
+    
+        img { height: 100%;}
+
+        img[class] {width: 100%;}
+
+        .image {
+                    float: left;
+                    width: 40%;
+            margin: 0 30px 20px 0;}
+            
+
+            
+
+#navigation {
+        margin: 0;
+    }
+    #navigation li a {
+        color: black;
+        display: block;
+        font-size: 0.8em;
+        font-weight: 100;
+        padding: 0.1% 0.1%;
+        text-decoration: none;
+    
+    }
+    #navigation li a:hover {
+        color: darkgrey;
+    }
+    #navigation li a:active {
+        color: black;
+        font-weight: 800;
+    }
+
+     
+
+            

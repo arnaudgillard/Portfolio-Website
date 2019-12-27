@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AGP</title>
+
+<style>
+    
+    *, *:before, *:after {
+                        box-sizing: border-box;
+                    }
+    
+    .box88 {
+                position: sticky;
+                top: calc(100vh*0.05);
+                left:100vw;
+         justify-self: flex-end;
+        z-index: 999;
+	       } 
+    
+    .openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #F3F3F3;
+  padding: 10px 10px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:white;
+}
+    
+    
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,600');
+            h1 {font-family: 'IBM Plex Sans', sans-serif; color: black; font-size: 2.5em; font-weight: 300;}
+            h2 {font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 1em; color: black;}
+            h3 {font-family: 'IBM Plex Sans', sans-serif; color: black;}
+            h4 {font-family: 'IBM Plex Sans', sans-serif; font-size: 1em; color: black;}
+            h5 {font-family: 'IBM Plex Sans', sans-serif; color: black;}
+            p  {font-family: 'IBM Plex Sans', sans-serif; color: black;}
+    psm {font-family: 'IBM Plex Sans', sans-serif; color: black; font-size: 0.75em;}
+            figcaption {font-family: 'IBM Plex Sans', sans-serif; font-size: 1em; color: black; font-weight: 300;}
+    
+            figcaption {
+                        margin-top: 1em;
+                        }
+    
+            .nested  {
+                        display:grid;
+                        grid-template-columns: repeat(5,1fr);
+                        /*grid-auto-rows: calc (100%/3);*/
+                        grid-gap:1em;  
+                        }
+    
+            .nested > div {
+                            border: #333 1px solid;
+                            padding: 1em;
+                            }
+    
+    .nestedideation  {
+                        display:grid;
+                        grid-template-columns: repeat(2,1fr);
+                        grid-template-rows:repeat(2,1fr) ;*/
+                        grid-gap:1em;  
+                        }
+    
+            .nestedideation > div {
+                            border: #333 1px solid;
+                            padding: 1em;
+                            }
+    
+ 
+
+
+@media all and (min-aspect-ratio: 4/3) {
+    .wrapper {
+                  justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-row-gap:0%;
+                margin: 0 auto;
+                grid-template-columns: repeat(5,calc((100vh/3)*0.74916)); /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/30) ;
+                margin-right:calc(100vw/30);
+    }
+    
+    .box16{
+                    grid-column: 1 / -1;
+		          grid-row: 1;
+		          display: grid;
+                    grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		          grid-column: 1 / 2;
+		          grid-row: 1;
+                }
+
+
+    
+    
+        .box1{
+                    /*align-self:start;  */
+                    display: none;
+                    }
+    
+        .box2 {
+                    /* align-self:end; */
+                    /*grid-column: 3;*/
+                    /*grid-row: 1/3;*/
+                     display: none;
+                    }
+    
+        .box3{
+                    /* justify-self:end; */
+                   display: none;
+                    }
+    
+        .box4{
+                    /* justify-self:end; */
+                    display: none;
+                    }
+    
+       
+        .box6{      grid-column: 1 / 6;
+		              grid-row: 8 /18;
+                            /* justify-self:end; */
+                    }
+    
+    .covertextbox{      grid-column: 1 / 6;
+		              grid-row: 18 /24;
+        text-align: right;
+                            /* justify-self:end; */
+                    }
+    
+        .modessa{      grid-column: 4 / 6;
+		              grid-row: 30 /46;
+            background: white;
+                    /* justify-self:end; */
+                    }
+        .modessatextleft{      grid-column: 1 / 3;
+		              grid-row: 29 /46;
+            text-align: right;
+                    /* justify-self:end; */
+                    }
+    
+    .modessatextright{      grid-column: 3 / 4;
+		                  grid-row: 32 /46;
+                        text-align: left;
+                        background: none;
+                    /* justify-self:end; */
+                    }
+    
+        
+            
+                    /* justify-self:end; */
+                    }
+    
+               
+    
+    
+    
+        .brainstorming1 {grid-column: 1 / 6;
+		              grid-row: 55 /65;
+            background: white;}
+    
+    
+    
+   
+    .brainstormingtext{grid-column: 1 / 3;
+		  grid-row: 65 /95;
+        text-align: right;
+  
+        
+    }
+    
+    
+    .hero2{grid-column: 1 / 6;
+		  grid-row: 130 /145;
+        display:grid;
+            grid-row-gap: 0;
+            grid-template-columns: 3fr 1fr 1fr 1fr;
+            grid-template-rows: 100%;
+            background: white;
+        padding: 2em;
+        column-gap: 2em;
+    }
+    
+                .hero1{grid-column: 1 / 2;
+                        grid-row: 1;
+
+                        }
+    
+                .hero2_1{grid-column: 2 / 3;
+		                  grid-row: 1;
+                        background: none;
+                        }
+                .hero2_2{grid-column: 3 / 4;
+                            grid-row: 1;
+                        background: none;
+                            }
+                .hero2_3{grid-column:4 / 5;
+                            grid-row: 1;
+                         background: none;
+                        }
+    
+    
+    .underprofiletext{
+         grid-column: 4 / 6;
+		  grid-row: 46 /50; 
+           text-align: left;
+    }
+    
+    .storyboard{
+        grid-column: 1 / 6;
+		  grid-row: 55 /65;
+        background: white;
+        
+        display:grid;
+            grid-row-gap: 0;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 100%;
+        column-gap: 1em;
+        padding: 2em;
+    }
+    
+                .storyboard1{
+                            grid-column: 1 / 2;
+		                      grid-row: 1;
+                        }
+                     .storyboard2{
+                                        grid-column: 2 / 3;
+		                      grid-row: 1;
+                        }
+                        .storyboard3{
+                            grid-column:3 / 4;
+		                      grid-row: 1;
+                        }
+    
+    .proposal1{
+        grid-column: 1 / 6;
+		  grid-row: 75 /100;
+        background: none;
+        
+        display:grid;
+            grid-row-gap: 0;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 60% 40%;
+        column-gap: 1em;
+        padding: 2em;
+    }
+    
+                .proposal1_1{
+                                grid-column: 1 / 2;
+		                        grid-row: 1;
+                            }
+                .proposal1_1text{
+                                grid-column: 1 / 2;
+		                        grid-row: 2;
+                                margin-left: 15px;
+                            }
+    
+                .proposal1_2{
+                                grid-column: 2 / 3;
+		                        grid-row: 1;
+                            }
+                .proposal1_2text{
+                                grid-column: 2 / 3;
+		                        grid-row: 2;
+                                margin-left: 15px;
+                            }
+    
+                .proposal1_3{
+                                grid-column:3 / 4;
+		                        grid-row: 1;
+                            }
+                .proposal1_3text{
+                                grid-column: 3 / 4;
+		                        grid-row: 2;
+                                margin-left: 15px;
+                            }
+    
+    
+                .proposal1_4{
+                                grid-column:4 / 5;
+		                        grid-row: 1;
+                            }
+                .proposal1_4text{
+                                grid-column: 4 / 5;
+		                        grid-row: 2;
+                                margin-left: 15px;
+                            }
+    
+                .proposal1_5{
+                                grid-column:5 / 6;
+		                        grid-row: 1;
+                            }
+                .proposal1_5text{
+                                grid-column: 5 / 6;
+		                        grid-row: 2;
+                                margin-left: 15px;
+                            }
+    
+    .proposal2{
+                grid-column: 1 / 6;
+		        grid-row: 100 /125;
+                background: none;
+        
+                display:grid;
+                grid-row-gap: 0;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                grid-template-rows: 60% 40%;
+                column-gap: 1em;
+                padding: 2em;
+            }
+    
+                .proposal2_1{
+                                grid-column: 1 / 2;
+		                        grid-row: 1;
+                            }
+                .proposal2_1text{
+                                grid-column: 1 / 2;
+		                        grid-row: 2;
+                                margin-left: 15px;
+                            }
+    
+                .proposal2_2{
+                                grid-column: 2 / 3;
+		                        grid-row: 1;
+                            }
+                .proposal2_2text{
+                                grid-column: 2 / 3;
+		                        grid-row: 2;
+                                margin-left: 15px;
+                            }
+    
+                .proposal2_3{
+                                grid-column:3 / 4;
+		                        grid-row: 1;
+                            }
+                .proposal2_3text{
+                                grid-column: 3 / 4;
+		                        grid-row: 2;
+                                margin-left: 15px;
+                            }
+    
+    
+                .proposal2_4{
+                                grid-column:4 / 5;
+		                        grid-row: 1;
+                            }
+                .proposal2_4text{
+                                grid-column: 4 / 5;
+		                        grid-row: 2;
+                                margin-left: 15px;
+                            }
+    
+                .proposal2_5{
+                                grid-column:5 / 6;
+		                        grid-row: 1;
+                            }
+                .proposal2_5text{
+                                grid-column: 5 / 6;
+		                        grid-row: 2;
+                                margin-left: 15px;
+                            }
+    
+    .imac{
+            grid-column: 1 / 6;
+		      grid-row: 130/150;
+        }
+    .herohand{
+            grid-column: 3 / 6;
+		      grid-row: 135/150;
+        }
+    
+    
+       
+    }
+
+@media all and (max-aspect-ratio: 4/3) {
+         
+    .wrapper {
+                justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-row-gap:0;
+                margin: 0 auto;
+                grid-template-columns: repeat(4,calc((100vh/3)*0.74916)); /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/30) ;
+                margin-right:calc(100vw/30);
+                }
+         
+    .box16{
+                grid-column: 1 / -1;
+		          grid-row: 1;
+		          display: grid;
+                grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		      grid-column: 1 / 2;
+		      grid-row: 1;
+                }
+
+            
+    .box1 {
+                display: none;
+                }
+
+    .box2 {
+                display: none;
+                }
+    
+    .box3 {
+                display: none;
+                }
+    .box4 {
+                display: none;
+                }
+    .box5 {
+                display: none;
+                }
+    .box6 {      grid-column: 1 / 2;
+		      grid-row: 8 /16;
+       
+
+                }
+    .modessa {
+                grid-column: 2 / 3;
+		      grid-row: 8 /16;
+                }
+    .box8 {     grid-column: 3 / 4;
+		          grid-row: 8 /16;
+
+                }
+    .box9 {       grid-column: 4 / 5;
+		          grid-row: 8 / 11;
+                object-fit: fill;
+        /*height: 0%;*/
+
+                }
+        
+    
+    
+    .box10 {
+                 grid-column: 4 / 5;
+		          grid-row: 13 /16;
+      
+                }
+    .box11{
+
+                }
+    .box12{
+
+                }
+    
+    .box13{
+
+                }
+    .box14{
+                display: none;
+                }
+    .box15{
+                display: none;
+                }   
+    .box16{
+                } 
+    
+ 
+    }
+    
+    
+    
+    @media all and (max-aspect-ratio: 8/7) {
+         
+    .wrapper {
+                justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-row-gap:0;
+                margin: 0 auto;
+                grid-template-columns: repeat(3,calc((100vh/3)*0.74916)); /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/30) ;
+                margin-right:calc(100vw/30);
+                }
+         
+    .box16{
+                grid-column: 1 / -1;
+		          grid-row: 1;
+		          display: grid;
+                grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		          grid-column: 1 / 2;
+		          grid-row: 1;
+                }
+
+
+            
+    .box1 {
+                display: none;
+                }
+
+    .box2 {
+                display: none;
+                }
+    
+    .box3 {
+                display: none;
+                }
+    .box4 {
+                display: none;
+                }
+    .box5 {
+                display: none;
+                }
+    .box6 {        grid-column: 1 / 2;
+		          grid-row: 8 /16;
+
+                }
+    .box7 {
+                grid-column: 2 / 3;
+		          grid-row: 8 /16;
+                }
+    .box8 {      grid-column: 3 / 4;
+		          grid-row: 8 /11;
+
+                }
+    .box9 {       grid-column: 3 / 4;
+		          grid-row: 13 / 16;
+       
+
+                }
+    .box10 {
+                grid-column: 3 / 4;
+		      grid-row: 18 /21;
+                      
+
+                }
+    .box11{
+
+                }
+    .box12{
+
+                }
+    
+    .box13{
+
+                }
+    .box14{
+                display: none;
+                }
+    .box15{
+                display: none;
+                }   
+    .box16{
+                } 
+    
+ 
+    }
+    
+    @media all and (max-aspect-ratio: 4/5) {
+         
+    .wrapper {
+                justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-gap:15px;
+                margin: 0 auto;
+                grid-template-columns: repeat(2,calc((100vh/3)*0.74916)); /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/15) ;
+                margin-right:calc(100vw/15);
+                }
+         
+    .box16{
+                grid-column: 1 / -1;
+		          grid-row: 1;
+		          display: grid;
+                grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		      grid-column: 1 / 2;
+		      grid-row: 1;
+                }
+
+
+            
+    .box1 {
+                display: none;
+                }
+
+    .box2 {
+                display: none;
+                }
+    
+    .box3 {
+                display: none;
+                }
+    .box4 {
+                display: none;
+                }
+    .box5 {
+                display: none;
+                }
+    .box6 {         grid-column: 1 / 2;
+		          grid-row: 3 /7;
+
+                }
+    .box7 {
+                    grid-column: 2 / 3;
+		              grid-row: 3 /7;
+                }
+    .box8   {       grid-column: 1 / 2;
+		              grid-row: 8 /12;
+
+                }
+    .box9 {         grid-column: 2 / 3;
+		              grid-row: 8 / 15;
+       
+
+                }
+    .box10 {
+                       grid-column: 1 / 2;
+		              grid-row: 15 /24;
+                      
+
+                }
+    .box11{
+
+                }
+    .box12{
+
+                }
+    
+    .box13{
+
+                }
+    .box14{
+                display: none;
+                }
+    .box15{
+                display: none;
+                }   
+    .box16{
+                } 
+    
+ 
+    }
+    
+    @media all and (max-width:415px) {
+         
+    .wrapper {
+                justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-gap:15px;
+                margin: 0 auto;
+                grid-template-columns: 100%; /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/6) calc(100vh/6) calc(100vh/6) calc(100vh/6) calc(100vh/6) calc(100vh/6);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/15) ;
+                margin-right:calc(100vw/15);
+                }
+         
+    .box16{
+                grid-column: 1;
+		          grid-row: 1;
+		          display: grid;
+                grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		      grid-column: 1 / 2;
+		      grid-row: 1;
+                }
+
+
+            
+    .box1 {
+                display: none;
+                }
+
+    .box2 {
+                display: none;
+                }
+    
+    .box3 {
+                display: none;
+                }
+    .box4 {
+                display: none;
+                }
+    .box5 {
+                display: none;
+                }
+    .box6 {         /*grid-column: 1 / 2;
+		          grid-row: 3 /5;*/
+display: none;
+                }
+    .box7 {
+                    /*grid-column: 1 / 2;
+		              grid-row: 6 /8;*/
+        display: none;
+                }
+    .box8   {       /*grid-column: 1 / 2;
+		              grid-row: 9 /11;*/
+        display: none;
+                }
+    .box9 {        /* grid-column: 1 / 2;
+		              grid-row: 12 / 15;*/
+        display: none;
+       
+
+                }
+    .box10 {
+                       grid-column: 1 / 2;
+		              grid-row: 2 /5;
+                      
+
+                }
+    .box11{
+
+                }
+    .box12{
+
+                }
+    
+    .box13{
+
+                }
+    .box14{
+                display: none;
+                }
+    .box15{
+                display: none;
+                }   
+    .box16{
+                } 
+    
+ 
+    }
+    
+    
+    
+    
+    
+    }
+    
+ 
+     
+
+    @supports (display: grid) {
+        .wrapper > * {
+                        width: auto;
+                        margin: 0;
+                        }
+    } 
+    
+    
+        .wrapper > div img {
+                                max-width: 120%;
+                                max-height: 120%;
+                            }*/
+    
+        /*.wrapper > div {
+                            background-color: lightgrey;
+                            padding: 1em;*/
+                        }
+    
+        /*.wrapper > div:nth-child(even){
+                            background: grey;
+                        }*/
+    
+
+
+        .object-fit_fill { object-fit: fill }
+        .object-fit_contain { object-fit: contain }
+        .object-fit_cover { object-fit: cover }
+        .object-fit_none { object-fit: none }
+        .object-fit_scale-down { object-fit: scale-down }
+
+    
+        img { height: 100%;}
+
+        img[class] {width: 100%;}
+
+        .image {
+                    float: left;
+                    width: 40%;
+            margin: 0 30px 20px 0;}
+            
+.fade-in1st {
+  animation: fadeIn ease-in 1500ms;
+  -webkit-animation: fadeIn ease-in 1500ms;
+       -webkit-animation-delay: 1s;
+  -moz-animation: fadeIn ease-in 1500ms;
+  -o-animation: fadeIn ease-in 1500ms;
+  -ms-animation: fadeIn ease-in 1500ms;
+        animation-delay: 1s;
+}
+
+.fade-in2nd {
+    
+  animation: fadeIn ease-in 2000ms;
+  -webkit-animation: fadeIn ease-in 2000ms;
+    -webkit-animation-delay: 1200ms;
+  -moz-animation: fadeIn ease-in 2000ms;
+  -o-animation: fadeIn ease-in 2000ms;
+  -ms-animation: fadeIn ease-in 2000ms;
+    animation-delay: 1200ms;
+}
+
+.fade-in3rd {
+    
+  animation: fadeIn ease-in 2000ms;
+  -webkit-animation: fadeIn ease-in 2000ms;
+    -webkit-animation-delay: 1400ms;
+  -moz-animation: fadeIn ease-in 2000ms;
+  -o-animation: fadeIn ease-in 2000ms;
+  -ms-animation: fadeIn ease-in 2000ms;
+    animation-delay: 1400ms;
+}
+
+.fade-in4th {
+    
+  animation: fadeIn ease-in 2000ms;
+  -webkit-animation: fadeIn ease-in 2000ms;
+    -webkit-animation-delay: 1600ms;
+  -moz-animation: fadeIn ease-in 2000ms;
+  -o-animation: fadeIn ease-in 2000ms;
+  -ms-animation: fadeIn ease-in 2000ms;
+    animation-delay: 1600ms;
+}
+
+.fade-in5th {
+    
+  animation: fadeIn ease-in 2000ms;
+  -webkit-animation: fadeIn ease-in 2000ms;
+    -webkit-animation-delay: 1800ms;
+  -moz-animation: fadeIn ease-in 2000ms;
+  -o-animation: fadeIn ease-in 2000ms;
+  -ms-animation: fadeIn ease-in 2000ms;
+    animation-delay: 1800ms;
+}
+
+
+@keyframes fadeIn{
+                    0% {
+                        opacity:0;
+                                    }
+                    100% {
+                        opacity:1;
+                                    }
+                }
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+
+
+
+
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    </style>
+    
+</head>
+    
+    
+<body bgcolor="F3F3F3">
+    
+    <div class="wrapper">
+        
+         <div class="box box88">
+                    <button class="openbtn" onclick="openNav()">
+                    <img src="navigation_button.svg" cstyle="width:16px">
+                    </button>  
+                </div>
+        
+        <div class="box box1">
+        </div>
+        
+        <div class="box box2">
+        </div>
+         
+        <div class="box box3">
+        </div>
+        
+        <div class="box box4">
+        </div>
+        
+        
+        <div class="box box6">
+          
+            <a style="text-decoration:none" href="Industrial_Design_&_Technology.html"> 
+                <img src="/UX_UI_Home_Folder/LoudVoices_Folder/cover.png" class="object-fit_cover"/>
+            </a>
+        </div>
+        
+        <div class="covertextbox">
+          
+            <h1>A common platform for change</h1>
+            <h2>A Personal Project</h2>
+        </div>
+            
+        
+        <div class="box modessa">
+             
+            <a style="text-decoration:none" href="UI_UX.html"> 
+                <img src="/UX_UI_Home_Folder/LoudVoices_Folder/profile.png" class="object-fit_cover">
+            </a>
+       
+            
+             </div>
+        
+        <div class="box modessatextleft">
+            <div class="style fade-in3rd">
+            <a style="text-decoration:none" href="Photography.html">
+                <h1>Jess Lee</h1>
+                <h2>Politically aware Millennial </h2>
+                <psm>Jess is a 19 year old US citizen studying architecture at Parsons university. She is concious of global events and is particularly passionate about the environment. Coming from Hong kong, she knows the impacts of pollution and bad waste managment.</psm>
+                
+                 <h2>Experience Goals</h2>
+                <psm>Jess would like to channel her voice and thoughts into impactful movements and campaigns. She would like an easy experience to connect her with local and international campaigns making her voice heard.</psm>
+                
+                <h2>Task Goals</h2>
+                <psm>Jess Lee would like a platform where she is able to visualise all the campaigns running in her local community. Jess would like to record her interest in an app and get targeted information inviting her to an event.
+She would like live updates to be transmitted to her phone during an event to keep her updated on any special messages or changes to plan/event location.  </psm>
+                <h2></h2>                
+            </a>
+        </div></div>
+        
+         <div class="box modessatextright">
+            <div class="style fade-in3rd">
+            <a style="text-decoration:none" href="Photography.html">
+                
+                <h2>Pain Points</h2>
+                <psm>Difficulty of being informed of what campaigns are going on in the community.</psm>
+                <h2></h2>
+                <psm>Getting updated on the status of an event is complicated and confusing as different events use different platforms/social media sites.</psm>
+                <h1>4.6</h1>
+                <psm>Million people marched in the US at the Womans March in 2016.</psm>
+                <h1>7%</h1>
+                <psm>Growth in global youth population projected in 2030.</psm> 
+            </a>
+        </div></div>
+         <div class="box underprofiletext">
+            <h2>“LoudVoices is a common platform for change in the modern era. It simplifies the difficult process of organising and joining movements and brings together young people with ideas and passion.”</h2>
+        </div>
+        
+            
+    
+
+        
+        
+           
+        <div class="box storyboard">
+            <div class="box storyboard1">
+                <img src="/UX_UI_Home_Folder/LoudVoices_Folder/storyboard1.png" class="object-fit_contain">
+            </div>
+            <div class="box storyboard2">
+                <img src="/UX_UI_Home_Folder/LoudVoices_Folder/storyboard2.png" class="object-fit_contain">
+            </div>
+            <div class="box storyboard3">
+                <img src="/UX_UI_Home_Folder/LoudVoices_Folder/storyboard3.png" class="object-fit_contain">
+            </div>
+            
+        </div>
+    
+     
+           
+        <div class="box box15">
+        </div>
+             
+        <div class="box box16">
+                 
+                 <div class=" box box17">
+                     <a style="text-decoration:none" href="UI_UX.html"> 
+                         <h1>LoudVoices</h1> 
+                         <p>A COMMON PLATFORM FOR CHANGE IN THE MODERN ERA</p>
+                     </a>
+                 </div>
+                 
+        </div>
+
+          
+        
+        <div class="proposal1">
+            <div class="proposal1_1">
+                <img src="/UX_UI_Home_Folder/LoudVoices_Folder/proposal1.png" class="object-fit_contain">
+        </div>
+            <div class="proposal1_1text">
+               <h2>Wireframing</h2>
+                
+        </div>
+            <div class="proposal1_2">
+                <img src="/UX_UI_Home_Folder/LoudVoices_Folder/proposal2.png" class="object-fit_contain">
+        </div>
+            <div class="proposal1_2text">
+               
+        </div>
+              <div class="proposal1_3">
+                  <img src="/UX_UI_Home_Folder/LoudVoices_Folder/proposal3.png" class="object-fit_contain">
+        </div>
+             <div class="proposal1_3text">
+               <h2>Homepage</h2>
+                 <p>On this page you see all the protests you have signed up for. And a list of your likes and views in #tag form.</p>
+        </div>
+             <div class="proposal1_4">
+                 <img src="/UX_UI_Home_Folder/LoudVoices_Folder/proposal4.png" class="object-fit_contain">
+        </div>
+             <div class="proposal1_4text">
+               <h2>Discover Page</h2>
+                 <p>On this page you will see all the running and upcoming protests. These may be viewed in two options. “Nearby” and “popular”.</p>
+        </div>
+            <div class="proposal1_5">
+                <img src="/UX_UI_Home_Folder/LoudVoices_Folder/proposal5.png" class="object-fit_contain">
+        </div>
+            <div class="proposal1_5text">
+               <h2>Going Page</h2>
+                <p>This page shows you an overview of all the protests you have signed up for. Notification badges indicate any important messages or uptates. The dates are clearly indicated next to the protest name. These areordered in chronological order.</p>
+        </div>
+        </div>
+       
+        
+        
+        <div class="proposal2">
+            <div class="proposal2_1">
+                <img src="/UX_UI_Home_Folder/LoudVoices_Folder/proposal21.png" class="object-fit_contain">
+        </div>
+            <div class="proposal1_1text">
+               <h2>Protest Card</h2>
+                 <p>Protest cards give an overview of the protest as it is. It provides information such as sponsors, timing, location etc. This helps you decide if you wish to follow it or not. </p>
+                
+        </div>
+            <div class="proposal2_2">
+                <img src="/UX_UI_Home_Folder/LoudVoices_Folder/proposal22.png" class="object-fit_contain">
+        </div>
+            <div class="proposal2_2text">
+                <h2>Update Page</h2>
+                 <p>This page shows the protester any necessary updates to look out for. These updates are pushed to your phone and may consist of anything the organiser wishes to share. The most recent update is highlighted in red and past updates in grey. </p>
+               
+        </div>
+              <div class="proposal2_3">
+                  <img src="/UX_UI_Home_Folder/LoudVoices_Folder/proposal23.png" class="object-fit_contain">
+                  
+        </div>
+             <div class="proposal2_3text">
+               <h2>Map Page</h2>
+                 <p>On this page a detailed view of the organised march is presented. The start and end location are clearly indicated. All information provided by AppleMaps. The map may also be exported to its native app.</p>
+        </div>
+             <div class="proposal2_4">
+                 <img src="/UX_UI_Home_Folder/LoudVoices_Folder/proposal24.png" class="object-fit_contain">
+        </div>
+             <div class="proposal2_4text">
+               <h2>Checklist Page</h2>
+                 <p>On this page, a checklist is presented. This checklist has been personally curated by the organisers. This helps remind protesters what to bring. (gives an interaction for the protesters)</p>
+        </div>
+            <div class="proposal2_5">
+                <img src="/UX_UI_Home_Folder/LoudVoices_Folder/proposal25.png" class="object-fit_contain">
+        </div>
+            <div class="proposal2_5text">
+               <h2>Supporters Page</h2>
+                <p>On this page you will see the logos of the 10 largest supporters for your protest. This can be in money form or simply support. Individuals may also donate to the page to help the cause (Through ApplePay)</p>
+        </div>
+        </div>
+        
+    
+        
+        <div class="brainstormingtext">
+            <h1>BRAINSTORMING</h1>
+            <h2>SCENARIO MAPPING</h2>
+            <p>To start off with this project, I conducted a scenario map. This map investigated the typical activities a business man/woman  would experience whilst being on a business trip.  I used Emojis to quickly convey the users activity and emotions and found it quite effective.</p>
+            
+        </div>
+    
+        <div class="imac">
+                 <img src="/UX_UI_Home_Folder/LoudVoices_Folder/imac.png" class="object-fit_contain">
+        </div>
+        <div class="herohand">
+                 <img src="/UX_UI_Home_Folder/LoudVoices_Folder/herohand.png" class="object-fit_contain">
+        </div>
+ 
+        
+    </div>
+</body>

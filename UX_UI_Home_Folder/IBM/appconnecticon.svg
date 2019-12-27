@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="31px" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>AC_Productive picto</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="AC_Productive-picto" stroke="#FFFFFF" stroke-width="0.72">
+            <path d="M16.71222,11.03855 L21.6903,21.01752" id="Path" stroke-linejoin="round"></path>
+            <path d="M14.02536,11.04745 L9.03177,21.01861" id="Path" stroke-linejoin="round"></path>
+            <circle id="Oval" stroke-linejoin="round" cx="15.36" cy="8.36" r="3"></circle>
+            <circle id="Oval" cx="15.36" cy="15.36" r="15"></circle>
+            <circle id="Oval" cx="8.36" cy="22.36" r="5"></circle>
+            <circle id="Oval" cx="8.36" cy="22.36" r="1.5"></circle>
+            <circle id="Oval" cx="22.36" cy="22.36" r="1.5"></circle>
+        </g>
+    </g>
+</svg>

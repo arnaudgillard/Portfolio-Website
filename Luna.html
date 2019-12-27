@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AGP</title>
+
+<style>
+    
+    *, *:before, *:after {
+                        box-sizing: border-box;
+                    }
+    
+
+    .box88 {
+                position: sticky;
+                top: calc(100vh*0.05);
+                left:100vw;
+         justify-self: flex-end;
+	       } 
+    
+    .openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #F3F3F3;
+  padding: 10px 10px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:white;
+}
+    
+    
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,600');
+            h1 {font-family: 'IBM Plex Sans', sans-serif; color: black; font-size: 2.5em; font-weight: 300;}
+            h2 {font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 1em; color: black;}
+            h3 {font-family: 'IBM Plex Sans', sans-serif; color: black;}
+            h4 {font-family: 'IBM Plex Sans', sans-serif; font-size: 1em; color: black;}
+            h5 {font-family: 'IBM Plex Sans', sans-serif; color: black;}
+            p  {font-family: 'IBM Plex Sans', sans-serif; color: black;}
+    psm {font-family: 'IBM Plex Sans', sans-serif; color: black; font-size: 0.75em;}
+            figcaption {font-family: 'IBM Plex Sans', sans-serif; font-size: 1em; color: black; font-weight: 300;}
+    
+            figcaption {
+                        margin-top: 1em;
+                        }
+    
+            .nested  {
+                        display:grid;
+                        grid-template-columns: repeat(5,1fr);
+                        /*grid-auto-rows: calc (100%/3);*/
+                        grid-gap:1em;  
+                        }
+    
+            .nested > div {
+                            border: #333 1px solid;
+                            padding: 1em;
+                            }
+    
+    .nestedideation  {
+                        display:grid;
+                        grid-template-columns: repeat(2,1fr);
+                        grid-template-rows:repeat(2,1fr) ;*/
+                        grid-gap:1em;  
+                        }
+    
+            .nestedideation > div {
+                            border: #333 1px solid;
+                            padding: 1em;
+                            }
+    
+ 
+
+
+@media all and (min-aspect-ratio: 4/3) {
+    .wrapper {
+                  justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-row-gap:0%;
+                margin: 0 auto;
+                grid-template-columns: repeat(5,calc((100vh/3)*0.74916)); /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/30) ;
+                margin-right:calc(100vw/30);
+    }
+    
+    .box16{
+                    grid-column: 1 / -1;
+		          grid-row: 1;
+		          display: grid;
+                    grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		          grid-column: 1 / 2;
+		          grid-row: 1;
+                }
+
+
+    
+    
+        .box1{
+                    /*align-self:start;  */
+                    display: none;
+                    }
+    
+        .box2 {
+                    /* align-self:end; */
+                    /*grid-column: 3;*/
+                    /*grid-row: 1/3;*/
+                     display: none;
+                    }
+    
+        .box3{
+                    /* justify-self:end; */
+                   display: none;
+                    }
+    
+        .box4{
+                    /* justify-self:end; */
+                    display: none;
+                    }
+    
+       
+        .box6{      grid-column: 3 / 6;
+		              grid-row: 10 /23;
+                            /* justify-self:end; */
+                    }
+    
+    .covertextbox{      grid-column: 1 / 3;
+		              grid-row: 10 /23;
+        text-align: right;
+                            /* justify-self:end; */
+                    }
+    
+        .modessa{      grid-column: 4 / 6;
+		              grid-row: 30 /46;
+            background: white;
+                    /* justify-self:end; */
+                    }
+        .modessatextleft{      grid-column: 1 / 3;
+		              grid-row: 29 /46;
+            text-align: right;
+                    /* justify-self:end; */
+                    }
+    
+    .modessatextright{      grid-column: 3 / 4;
+		                  grid-row: 32 /46;
+                        text-align: left;
+                        background: none;
+                    /* justify-self:end; */
+                    }
+    
+        
+            
+                    /* justify-self:end; */
+                    }
+    
+               
+    
+    
+    
+      
+    
+    
+    
+     .modeldevelopmenttext{grid-column: 2 / 4;
+		  grid-row: 80 /90;
+        text-align: right;
+    }
+    
+    .engineeringdrawing {
+        grid-column: 4 / 6;
+		  grid-row: 80 /90;
+        
+    }
+    
+    .modelling1 {
+        grid-column: 1 / 2;
+		  grid-row: 95 /105;
+        
+    }
+    .modelling2 {
+        grid-column: 2 / 4;
+		  grid-row: 95 /105;
+        
+    }
+    .modelling3 {
+        grid-column: 4 / 6;
+		  grid-row: 95 /115;
+        
+    }
+    
+    .modellingtext {
+        grid-column: 2 / 4;
+		  grid-row: 105 /110;
+        text-align: right;
+        
+    }
+    
+   
+    
+    
+    
+    
+    
+ 
+    
+    
+    .underprofiletext{
+         grid-column: 4 / 6;
+		  grid-row: 46 /50; 
+           text-align: left;
+    }
+    
+    .storyboard{
+        grid-column: 1 / 6;
+		  grid-row: 55 /75;
+        background: white;
+        padding: 2%;
+    }
+
+    
+   
+    
+    .hero2 {
+        grid-column: 2 / 4;
+		  grid-row: 120 /130;
+        
+    }
+    
+    .hero3 {
+        grid-column: 4 / 6;
+		  grid-row: 120 /130;
+        
+    }
+    
+    .hero4 {
+        grid-column: 1 / 2;
+		  grid-row: 120 /130;
+        
+    }
+    
+    .prototypingtext {
+        grid-column: 4 / 6;
+		  grid-row: 131 /140;
+        
+    }
+    
+    .finalrender {
+        grid-column: 1 / 6;
+		  grid-row: 140 /160;
+        
+    }
+    
+    
+    
+    
+    
+       
+    }
+
+@media all and (max-aspect-ratio: 4/3) {
+         
+    .wrapper {
+                justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-row-gap:0;
+                margin: 0 auto;
+                grid-template-columns: repeat(4,calc((100vh/3)*0.74916)); /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/30) ;
+                margin-right:calc(100vw/30);
+                }
+         
+    .box16{
+                grid-column: 1 / -1;
+		          grid-row: 1;
+		          display: grid;
+                grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		      grid-column: 1 / 2;
+		      grid-row: 1;
+                }
+            
+    .box1 {
+                display: none;
+                }
+
+    .box2 {
+                display: none;
+                }
+    
+    .box3 {
+                display: none;
+                }
+    .box4 {
+                display: none;
+                }
+    .box5 {
+                display: none;
+                }
+    .box6 {      grid-column: 1 / 2;
+		      grid-row: 8 /16;
+       
+
+                }
+    .modessa {
+                grid-column: 2 / 3;
+		      grid-row: 8 /16;
+                }
+    .box8 {     grid-column: 3 / 4;
+		          grid-row: 8 /16;
+
+                }
+    .box9 {       grid-column: 4 / 5;
+		          grid-row: 8 / 11;
+                object-fit: fill;
+        /*height: 0%;*/
+
+                }
+        
+    
+    
+    .box10 {
+                 grid-column: 4 / 5;
+		          grid-row: 13 /16;
+      
+                }
+    .box11{
+
+                }
+    .box12{
+
+                }
+    
+    .box13{
+
+                }
+    .box14{
+                display: none;
+                }
+    .box15{
+                display: none;
+                }   
+    .box16{
+                } 
+    
+ 
+    }
+    
+    
+    
+    @media all and (max-aspect-ratio: 8/7) {
+         
+    .wrapper {
+                justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-row-gap:0;
+                margin: 0 auto;
+                grid-template-columns: repeat(3,calc((100vh/3)*0.74916)); /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24) calc(100vh/24);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/30) ;
+                margin-right:calc(100vw/30);
+                }
+         
+    .box16{
+                grid-column: 1 / -1;
+		          grid-row: 1;
+		          display: grid;
+                grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		          grid-column: 1 / 2;
+		          grid-row: 1;
+                }
+
+
+            
+    .box1 {
+                display: none;
+                }
+
+    .box2 {
+                display: none;
+                }
+    
+    .box3 {
+                display: none;
+                }
+    .box4 {
+                display: none;
+                }
+    .box5 {
+                display: none;
+                }
+    .box6 {        grid-column: 1 / 2;
+		          grid-row: 8 /16;
+
+                }
+    .box7 {
+                grid-column: 2 / 3;
+		          grid-row: 8 /16;
+                }
+    .box8 {      grid-column: 3 / 4;
+		          grid-row: 8 /11;
+
+                }
+    .box9 {       grid-column: 3 / 4;
+		          grid-row: 13 / 16;
+       
+
+                }
+    .box10 {
+                grid-column: 3 / 4;
+		      grid-row: 18 /21;
+                      
+
+                }
+    .box11{
+
+                }
+    .box12{
+
+                }
+    
+    .box13{
+
+                }
+    .box14{
+                display: none;
+                }
+    .box15{
+                display: none;
+                }   
+    .box16{
+                } 
+    
+ 
+    }
+    
+    @media all and (max-aspect-ratio: 4/5) {
+         
+    .wrapper {
+                justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-gap:15px;
+                margin: 0 auto;
+                grid-template-columns: repeat(2,calc((100vh/3)*0.74916)); /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12) calc(100vh/12);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/15) ;
+                margin-right:calc(100vw/15);
+                }
+         
+    .box16{
+                grid-column: 1 / -1;
+		          grid-row: 1;
+		          display: grid;
+                grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		      grid-column: 1 / 2;
+		      grid-row: 1;
+                }
+
+
+            
+    .box1 {
+                display: none;
+                }
+
+    .box2 {
+                display: none;
+                }
+    
+    .box3 {
+                display: none;
+                }
+    .box4 {
+                display: none;
+                }
+    .box5 {
+                display: none;
+                }
+    .box6 {         grid-column: 1 / 2;
+		          grid-row: 3 /7;
+
+                }
+    .box7 {
+                    grid-column: 2 / 3;
+		              grid-row: 3 /7;
+                }
+    .box8   {       grid-column: 1 / 2;
+		              grid-row: 8 /12;
+
+                }
+    .box9 {         grid-column: 2 / 3;
+		              grid-row: 8 / 15;
+       
+
+                }
+    .box10 {
+                       grid-column: 1 / 2;
+		              grid-row: 15 /24;
+                      
+
+                }
+    .box11{
+
+                }
+    .box12{
+
+                }
+    
+    .box13{
+
+                }
+    .box14{
+                display: none;
+                }
+    .box15{
+                display: none;
+                }   
+    .box16{
+                } 
+    
+ 
+    }
+    
+    @media all and (max-width:415px) {
+         
+    .wrapper {
+                justify-content:space-between;
+                display: grid;
+                grid-area: center;
+                grid-gap:15px;
+                margin: 0 auto;
+                grid-template-columns: 100%; /*0.749.. is the ratio of the card*/
+                grid-auto-rows: calc(100vh/6) calc(100vh/6) calc(100vh/6) calc(100vh/6) calc(100vh/6) calc(100vh/6);
+                grid-column-gap: minmax(10px, auto);
+                margin-left:calc(100vw/15) ;
+                margin-right:calc(100vw/15);
+                }
+         
+    .box16{
+                grid-column: 1;
+		          grid-row: 1;
+		          display: grid;
+                grid-gap: 0px;
+		          grid-template-columns: 1fr 1fr;
+                } 
+           
+    .box17 {
+		      grid-column: 1 / 2;
+		      grid-row: 1;
+                }
+
+
+            
+    .box1 {
+                display: none;
+                }
+
+    .box2 {
+                display: none;
+                }
+    
+    .box3 {
+                display: none;
+                }
+    .box4 {
+                display: none;
+                }
+    .box5 {
+                display: none;
+                }
+    .box6 {         /*grid-column: 1 / 2;
+		          grid-row: 3 /5;*/
+display: none;
+                }
+    .box7 {
+                    /*grid-column: 1 / 2;
+		              grid-row: 6 /8;*/
+        display: none;
+                }
+    .box8   {       /*grid-column: 1 / 2;
+		              grid-row: 9 /11;*/
+        display: none;
+                }
+    .box9 {        /* grid-column: 1 / 2;
+		              grid-row: 12 / 15;*/
+        display: none;
+       
+
+                }
+    .box10 {
+                       grid-column: 1 / 2;
+		              grid-row: 2 /5;
+                      
+
+                }
+    .box11{
+
+                }
+    .box12{
+
+                }
+    
+    .box13{
+
+                }
+    .box14{
+                display: none;
+                }
+    .box15{
+                display: none;
+                }   
+    .box16{
+                } 
+    
+ 
+    }
+    
+    
+    
+    
+    
+    }
+    
+ 
+     
+
+    @supports (display: grid) {
+        .wrapper > * {
+                        width: auto;
+                        margin: 0;
+                        }
+    } 
+    
+    
+        .wrapper > div img {
+                                max-width: 120%;
+                                max-height: 120%;
+                            }*/
+    
+        /*.wrapper > div {
+                            background-color: lightgrey;
+                            padding: 1em;*/
+                        }
+    
+        /*.wrapper > div:nth-child(even){
+                            background: grey;
+                        }*/
+    
+
+
+        .object-fit_fill { object-fit: fill }
+        .object-fit_contain { object-fit: contain }
+        .object-fit_cover { object-fit: cover }
+        .object-fit_none { object-fit: none }
+        .object-fit_scale-down { object-fit: scale-down }
+
+    
+        img { height: 100%;}
+
+        img[class] {width: 100%;}
+
+        .image {
+                    float: left;
+                    width: 40%;
+            margin: 0 30px 20px 0;}
+            
+.fade-in1st {
+  animation: fadeIn ease-in 1500ms;
+  -webkit-animation: fadeIn ease-in 1500ms;
+       -webkit-animation-delay: 1s;
+  -moz-animation: fadeIn ease-in 1500ms;
+  -o-animation: fadeIn ease-in 1500ms;
+  -ms-animation: fadeIn ease-in 1500ms;
+        animation-delay: 1s;
+}
+
+.fade-in2nd {
+    
+  animation: fadeIn ease-in 2000ms;
+  -webkit-animation: fadeIn ease-in 2000ms;
+    -webkit-animation-delay: 1200ms;
+  -moz-animation: fadeIn ease-in 2000ms;
+  -o-animation: fadeIn ease-in 2000ms;
+  -ms-animation: fadeIn ease-in 2000ms;
+    animation-delay: 1200ms;
+}
+
+.fade-in3rd {
+    
+  animation: fadeIn ease-in 2000ms;
+  -webkit-animation: fadeIn ease-in 2000ms;
+    -webkit-animation-delay: 1400ms;
+  -moz-animation: fadeIn ease-in 2000ms;
+  -o-animation: fadeIn ease-in 2000ms;
+  -ms-animation: fadeIn ease-in 2000ms;
+    animation-delay: 1400ms;
+}
+
+.fade-in4th {
+    
+  animation: fadeIn ease-in 2000ms;
+  -webkit-animation: fadeIn ease-in 2000ms;
+    -webkit-animation-delay: 1600ms;
+  -moz-animation: fadeIn ease-in 2000ms;
+  -o-animation: fadeIn ease-in 2000ms;
+  -ms-animation: fadeIn ease-in 2000ms;
+    animation-delay: 1600ms;
+}
+
+.fade-in5th {
+    
+  animation: fadeIn ease-in 2000ms;
+  -webkit-animation: fadeIn ease-in 2000ms;
+    -webkit-animation-delay: 1800ms;
+  -moz-animation: fadeIn ease-in 2000ms;
+  -o-animation: fadeIn ease-in 2000ms;
+  -ms-animation: fadeIn ease-in 2000ms;
+    animation-delay: 1800ms;
+}
+
+
+@keyframes fadeIn{
+                    0% {
+                        opacity:0;
+                                    }
+                    100% {
+                        opacity:1;
+                                    }
+                }
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+
+
+
+
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    </style>
+    
+</head>
+    
+    
+<body bgcolor="F3F3F3">
+    
+    <div class="wrapper">
+        
+         <div class="box box88">
+                    <button class="openbtn" onclick="openNav()">
+                    <img src="navigation_button.svg" cstyle="width:16px">
+                    </button>  
+                </div>
+        
+        <div class="box box1">
+        </div>
+        
+        <div class="box box2">
+        </div>
+         
+        <div class="box box3">
+        </div>
+        
+        <div class="box box4">
+        </div>
+        
+        
+        <div class="box box6">
+          
+            <a style="text-decoration:none" href="Industrial_Design_&_Technology.html"> 
+                <img src="/IDT_Folder/Luna_Folder/LUNA%20render%20for%20portfolio.2.png" class="object-fit_cover"/>
+            </a>
+        </div>
+        
+        <div class="covertextbox">
+          
+            <h1>Compact lighting for student needs</h1>
+            <h2>Individual, 1 Week</h2>
+        </div>
+            
+        
+        <div class="box modessa">
+             
+            <a style="text-decoration:none" href="UI_UX.html"> 
+                <img src="/IDT_Folder/Luna_Folder/dorm.png" class="object-fit_cover">
+            </a>
+       
+            
+             </div>
+        
+        <div class="box modessatextleft">
+            <div class="style fade-in3rd">
+            <a style="text-decoration:none" href="Photography.html">
+                <h1>THE BRIEF</h1>
+                <h2>1 WEEK ASSIGNMENT</h2>
+                <psm>“Using a live hinge or hinges you must design a homeware product for student accommodation that must be capable of compact storage. </psm>
+<h2></h2>
+                <psm>The predominant material shall be Polypropylene (PP) with the exeption of fasteners and/or special purpose componentry. </psm>
+<h2></h2>
+                <psm>The size of the product should not exceed 500mm square and 300mm height. “</psm>
+                              
+            </a>
+        </div></div>
+        
+         <div class="box modessatextright">
+            <div class="style fade-in3rd">
+            <a style="text-decoration:none" href="Photography.html">
+                
+                <h2>Live hinges</h2>
+<h2></h2>
+                <h2>Polypropylene</h2>
+            <h2></h2>
+                <h2>Student Accommodation</h2>
+                <h2></h2>
+                <h2>Compact storage</h2>
+                <h2></h2>
+                <h2>500mmx500mmx300mm</h2>
+            </a>
+        </div></div>
+         <div class="box underprofiletext">
+            <h2>“20% of students studying higher education in the UK come from abroad”</h2>
+        </div>
+        
+            
+    
+
+        
+        
+           
+        <div class="box storyboard">
+                <img src="/IDT_Folder/Luna_Folder/storyboard.png" class="object-fit_contain">
+        </div>
+   
+    
+     
+           
+        <div class="box box15">
+        </div>
+             
+        <div class="box box16">
+                 
+                 <div class=" box box17">
+                     <a style="text-decoration:none" href="Industrial_Design___Technology.html"> 
+                         <h1>Luna</h1> 
+                         <p>COMPACT LIGHTING FOR STUDENTS</p>
+                     </a>
+                 </div>
+                 
+
+        </div>
+
+             
+    
+        
+        
+        
+        <div class="modeldevelopmenttext">
+            <h1>USER RESEARCH</h1>
+            <h2>STUDENT ACCOMMMODATION</h2>
+            <p>In order to understand how live hinges could be implemented with innovative use I conducted several research visits in student accommodation. I observed the surroundings of their accommodation and conducted interview style conversations to better understand the struggles and pain points. </p>
+            
+        </div>
+        
+        <div class="modellingtext">
+            <h1>Modelling</h1>
+            <h2>UNDERSTANDING LIVE HINGES</h2>
+            <p>Card was the most appropriate material choice of Lo-FI modelling.  Scoring the card directly creates a live hinge which can be very versitile. With this simple yet manipulative material, I was able to create many design iterations. It helped me understand further the possibilities and limitations of live hinges. I allowed my design to be developed through the modelling phase. 
+</p>
+            
+        </div>
+        
+        <div class="engineeringdrawing">
+                 <img src="/IDT_Folder/Luna_Folder/usertesting.png" class="object-fit_cover">
+        </div>
+        
+         <div class="modelling1">
+                 <img src="/IDT_Folder/Luna_Folder/modelling1.png" class="object-fit_cover">
+        </div>
+        <div class="modelling2">
+                 <img src="/IDT_Folder/Luna_Folder/modelling2.png" class="object-fit_cover">
+        </div>
+         <div class="modelling3">
+                 <img src="/IDT_Folder/Luna_Folder/modelling3.png" class="object-fit_cover">
+        </div>
+   
+        
+
+        
+        <div class="hero2">
+                 <img src="/IDT_Folder/Luna_Folder/prototype1.png" class="object-fit_cover">
+        </div>
+         <div class="hero3">
+                 <img src="/IDT_Folder/Luna_Folder/prototype2.png" class="object-fit_cover">
+        </div>
+         <div class="hero4">
+                 <img src="/IDT_Folder/Luna_Folder/prototype3.png" class="object-fit_cover">
+        </div>
+
+        <div class="prototypingtext">
+            <h1>PROTOTYPING</h1>
+            <h2>FORM BOARD</h2>
+            <p>Foam board was then used to create a scale model of my concept design. This allowed me to user test the idea and to develop greater understanding of the assembly process. The scale model required  consideration on weight, manufacturability and function. 
+</p>
+            
+        </div>
+        
+         <div class="finalrender">
+                 <img src="/IDT_Folder/Luna_Folder/finalrender.png" class="object-fit_contain">
+        </div>
+        
+    </div>
+</body>
