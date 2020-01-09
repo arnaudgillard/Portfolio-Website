@@ -11,7 +11,7 @@
     <item>
       <title>My Sketch Library</title>
       <pubDate>Wed, 23 Jun 2019 11:19:04 +0000</pubDate>
-      <enclosure url="https://arnaudgillard.com/aglibrary.sketch" type="application/octet-stream" sparkle:version="1"/>
+      <enclosure url="https://github.com/arnaudgillard/Portfolio-Website/raw/master/aglibrary.sketch" type="application/octet-stream" sparkle:version="1"/>
     </item>
   </channel>
 </rss>
